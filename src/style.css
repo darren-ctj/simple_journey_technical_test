@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e88ff;
+
+  --color-navigation-foreground: #d6e3ff;
+  --color-navigation-border: #fff3;
+
+  --color-primary-foreground: #fff;
+}
+
+@utility bg-gradient-primary {
+  background: linear-gradient(135deg, #1e88ff, #1466a8);
+}
