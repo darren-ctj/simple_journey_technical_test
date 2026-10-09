@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { motion } from "motion-v";
+
 interface StatementHeadingProps {
   brand?: string;
   statement: string;
@@ -19,8 +21,15 @@ withDefaults(defineProps<StatementHeadingProps>(), {
     ]"
   >
     <div class="relative z-20 max-w-[1100px]">
-      <div
-        class="inline-flex items-center gap-[10px] animate-fade-in [animation-delay:300ms] opacity-0"
+      <motion.div
+        class="inline-flex items-center gap-[10px]"
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :transition="{
+          duration: 1,
+          ease: 'easeInOut',
+          delay: 0.3,
+        }"
       >
         <img
           src="/icons/diamond.png"
@@ -28,16 +37,30 @@ withDefaults(defineProps<StatementHeadingProps>(), {
           class="size-[14px] object-contain"
         />
 
-        <span class="text-base text-[#4da3ff]">
+        <span class="text-base max-[640px]:text-xs text-brand-blue">
           {{ brand }}
         </span>
-      </div>
+      </motion.div>
 
-      <h1
-        class="mt-0 font-sans text-[clamp(2rem,2.8vw,2.25rem)] font-medium leading-[150%] tracking-[-0.5px] animate-[fade-in_1s_ease_forwards] [animation-delay:1s] opacity-0 max-[1024px]:text-[24px] max-[640px]:text-[20px] max-[640px]:leading-[1.6]"
+      <motion.h1
+        class="max-[1024px]:my-3 my-6 font-sans text-[clamp(2rem,2.8vw,2.25rem)] font-medium leading-[150%] tracking-[-0.5px]"
+        :class="[
+          // <= 1024px
+          'max-[1024px]:text-[24px]',
+          // <= 640px
+          'max-[640px]:text-[20px]',
+          'max-[640px]:leading-[1.6]',
+        ]"
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :transition="{
+          duration: 1,
+          ease: 'easeInOut',
+          delay: 1,
+        }"
       >
         {{ statement }}
-      </h1>
+      </motion.h1>
     </div>
   </section>
 </template>

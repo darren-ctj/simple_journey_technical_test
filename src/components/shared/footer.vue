@@ -33,10 +33,10 @@ import { SOCIAL_LINKS } from "@/constants/link";
       </div>
     </div>
 
-    <div class="divider my-8 mb-4 h-px bg-divider" />
+    <div class="my-8 mb-4 h-px bg-divider" />
 
     <div
-      class="bottom flex items-start justify-between max-[768px]:flex-col max-[768px]:gap-3 max-[768px]:text-center"
+      class="flex items-center justify-between max-[768px]:flex-col max-[768px]:gap-3 max-[768px]:text-center"
     >
       <span class="text-sm text-white">
         © 2026 PT Simple Journey. All Rights Reserved. |

@@ -37,7 +37,7 @@ function handleNavigationClick() {
       'max-[819px]:w-[85vw]',
       'max-[819px]:rounded-[90px]',
       'max-[819px]:border',
-      'max-[819px]:border-[#fff3]',
+      'max-[819px]:border-navigation-border',
       'max-[819px]:bg-[#ffffff0d]',
       'max-[819px]:px-[1.2rem]',
       'max-[819px]:py-[0.6rem]',
@@ -50,7 +50,7 @@ function handleNavigationClick() {
       'min-[1280px]:w-[85vw]',
       'min-[1280px]:rounded-[90px]',
       'min-[1280px]:border',
-      'min-[1280px]:border-[#fff3]',
+      'min-[1280px]:border-navigation-border',
       'min-[1280px]:shadow-[0_4px_30px_#0000001a]',
       // Scrolled state
       isScrolled && [

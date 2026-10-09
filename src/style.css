@@ -11,14 +11,12 @@
   --color-brand-blue: #4da3ff;
   --color-accent-blue: #6cb6ff;
   --color-footer-accent: #1e90ff;
-
   /* surfaces */
   --color-page: #010304;
   --color-panel: #050c14;
   --color-footer: #05070c;
   --color-nav-surface: #0a121e;
   --color-divider: #0f1b2d;
-
   /* text */
   --color-navigation-foreground: #d6e3ff;
   --color-navigation-border: #fff3;
@@ -31,32 +29,6 @@
   --shadow-glass-card:
     0 8px 32px #0000001a, inset 0 1px 0 #ffffff80, inset 0 -1px 0 #ffffff1a,
     inset 0 0 4px 2px #fff3;
-
-  /* animations */
-  --animate-hero-enter: hero-enter 1s ease-out forwards;
-  --animate-fade-in: fade-in 1s ease forwards;
-
-  @keyframes hero-enter {
-    0% {
-      opacity: 0;
-      transform: translateY(1000px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
 }
 
 @utility bg-gradient-primary {
@@ -82,11 +54,6 @@
     overflow-x: hidden;
   }
 
-  /*
-   * The original site ships without a margin / heading-weight reset, so the
-   * browser defaults are part of its vertical rhythm. Mirror them here; any
-   * component rule (layered later) still wins over these.
-   */
   h1,
   h2,
   h3,
@@ -128,15 +95,4 @@
     padding-block: 1px;
     padding-inline: 6px;
   }
-}
-
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 0.8s;
-}
-
-.slide-enter-from,
-.slide-leave-to {
-  opacity: 0;
-  transform: translate(40px);
 }

@@ -2,6 +2,13 @@ import type { Service } from "../types/service";
 
 export const SERVICES: Service[] = [
   {
+    title: "Cross-Industry Solution",
+    description:
+      "We deliver tailored technology solutions across industries, including finance, healthcare, retail, and manufacturing. Our expertise in industry-specific challenges allows us to create scalable, future-ready digital ecosystems that drive business growth.",
+    video: "/cross-industry.webm",
+    imageFirst: false,
+  },
+  {
     title: "Infrastructure Solution",
     description:
       "Optimize your IT foundation with our cutting-edge infrastructure solutions. From cloud computing and data centers to network security and system integration, we ensure a scalable, secure, and high-performance IT environment tailored to your business needs.",
