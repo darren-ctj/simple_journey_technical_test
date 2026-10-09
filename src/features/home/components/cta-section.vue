@@ -25,7 +25,7 @@ import ContactButton from "@/components/ui/contact-button.vue";
             'max-[768px]:tracking-[-0.5px]',
           ]"
           :initial="{ opacity: 0 }"
-          :whileInView="{ opacity: 1 }"
+          :animate="{ opacity: 1 }"
           :transition="{
             duration: 1,
             delay: 0.3,

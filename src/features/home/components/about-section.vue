@@ -12,7 +12,7 @@ const { currentIndex, handleWheel } = useSlideDeck(sectionRef, 2);
   <div class="show-desktop">
     <section
       ref="sectionRef"
-      class="hero-statement relative h-screen max-h-screen overflow-hidden bg-[url(/about.webp)] bg-cover bg-center bg-no-repeat text-white"
+      class="hero-statement relative h-screen max-h-screen overflow-hidden bg-[url(/features/home/about-section-bg.webp)] bg-cover bg-center bg-no-repeat text-white"
       @wheel="handleWheel"
     >
       <div

@@ -76,9 +76,9 @@ const cardAnimations = SERVICES.map((_, index) => {
           }"
         >
           <div class="relative h-full" :class="['max-[768px]:h-[35rem]']">
-            <motion.article
+            <!-- <motion.article
               v-for="(service, index) in SERVICES"
-              :key="service.title"
+              :key="index"
               class="absolute left-0 right-0 top-0 flex h-[30rem] items-center gap-10 rounded-[10px] border-[0.5px] border-[#f7f3f3ee] bg-black p-10"
               :class="[
                 'max-[768px]:bottom-0',
@@ -88,6 +88,18 @@ const cardAnimations = SERVICES.map((_, index) => {
                 'max-[768px]:p-[20px_30px]',
               ]"
               :style="cardAnimations[index]"
+            > -->
+            <motion.article
+              v-for="(service, index) in SERVICES"
+              :key="index"
+              class="absolute left-0 right-0 top-0 flex h-[30rem] items-center gap-10 rounded-[10px] border-[0.5px] border-[#f7f3f3ee] bg-black p-10"
+              :class="[
+                'max-[768px]:bottom-0',
+                'max-[768px]:h-auto',
+                'max-[768px]:flex-col',
+                'max-[768px]:gap-0',
+                'max-[768px]:p-[20px_30px]',
+              ]"
             >
               <template v-if="service.imageFirst">
                 <div class="image flex flex-1 justify-center">
