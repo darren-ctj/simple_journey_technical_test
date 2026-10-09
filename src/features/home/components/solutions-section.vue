@@ -6,11 +6,11 @@ import ProductCard from "@/components/ui/product-card.vue";
 
 <template>
   <section
-    class="relative bg-[url(/features/home/solutions-section-bg.webp)] bg-cover bg-center bg-no-repeat text-white"
     :class="[
-      'p-[40px_10rem]',
-      // <= 768px
-      'max-[768px]:!p-[20px_15px]',
+      'relative bg-[url(/features/home/solutions-section-bg.webp)]',
+      'bg-cover bg-center bg-no-repeat text-white',
+      'p-[2.5rem_10rem]',
+      'max-[768px]:p-5',
     ]"
   >
     <div

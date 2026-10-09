@@ -4,14 +4,15 @@ import { motion } from "motion-v";
 
 <template>
   <section
-    class="relative box-content min-h-[90vh] overflow-hidden text-white"
     :class="[
-      'p-[140px_80px_80px]',
+      'relative',
+      'box-content overflow-hidden text-white',
+      'min-h-[90vh] p-[8.75rem_5rem_5rem]',
       // <= 1024px
-      'max-[1024px]:p-[120px_40px_60px]',
+      'max-[1024px]:p-[7.5rem_2.5rem_3.75rem]',
       // <= 640px
       'max-[640px]:min-h-[80vh]',
-      'max-[640px]:p-[100px_24px_50px]',
+      'max-[640px]:p-[6.25rem_1.5rem_3.125rem]',
     ]"
   >
     <video

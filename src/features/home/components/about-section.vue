@@ -9,18 +9,18 @@ const { currentIndex, handleWheel } = useSlideDeck(sectionRef, 2);
 </script>
 
 <template>
-  <div class="show-desktop">
+  <div>
     <section
       ref="sectionRef"
-      class="hero-statement relative h-screen max-h-screen overflow-hidden bg-[url(/features/home/about-section-bg.webp)] bg-cover bg-center bg-no-repeat text-white"
+      class="relative h-screen max-h-screen overflow-hidden bg-[url(/features/home/about-section-bg.webp)] bg-cover bg-center bg-no-repeat text-white"
       @wheel="handleWheel"
     >
       <div
-        class="overlay absolute inset-0 z-[1] bg-[radial-gradient(circle,#090f1633_0%,#050c1433_70%)]"
-      ></div>
+        class="absolute inset-0 z-[1] bg-[radial-gradient(circle,#090f1633_0%,#050c1433_70%)]"
+      />
 
-      <div class="scroll-content relative z-[2] h-full">
-        <!-- Slide 1: company statement -->
+      <div class="relative z-[2] h-full">
+        <!-- Slide 1 -->
         <div
           class="slide pointer-events-none absolute inset-0 translate-y-[30px] opacity-0 transition-all duration-700"
           :class="{
@@ -28,7 +28,7 @@ const { currentIndex, handleWheel } = useSlideDeck(sectionRef, 2);
           }"
         >
           <div
-            class="panel flex h-full w-full items-center justify-center text-center"
+            class="flex h-full w-full items-center justify-center text-center"
           >
             <StatementHeading
               :brand-delay="0.5"
@@ -37,13 +37,14 @@ const { currentIndex, handleWheel } = useSlideDeck(sectionRef, 2);
           </div>
         </div>
 
+        <!-- Slide 2 -->
         <div
           class="slide pointer-events-none absolute inset-0 translate-y-[30px] opacity-0 transition-all duration-700"
           :class="{
             'pointer-events-auto translate-y-0 opacity-100': currentIndex === 1,
           }"
         >
-          <div class="panel flex h-full w-full items-center justify-center">
+          <div class="flex h-full w-full items-center justify-center">
             <WhyChooseUs :execution="currentIndex === 1" />
           </div>
         </div>

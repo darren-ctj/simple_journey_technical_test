@@ -8,12 +8,11 @@ import ContactButton from "@/components/ui/contact-button.vue";
     <div
       class="relative z-[1] flex items-center justify-between"
       :class="[
-        'p-[40px_10rem]',
-        // <= 768px
+        'p-[2.5rem_10rem]',
+        'max-[768px]:p-5',
         'max-[768px]:flex-col',
         'max-[768px]:items-start',
         'max-[768px]:gap-4',
-        'max-[768px]:p-5',
       ]"
     >
       <div class="text max-w-[700px]" :class="['max-[768px]:max-w-[100vw]']">

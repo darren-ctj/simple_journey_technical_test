@@ -32,7 +32,7 @@ defineProps<{
       />
     </div>
 
-    <h3 class="title mt-2 text-base">
+    <h3 class="title mt-2 text-base underline">
       {{ title }}
     </h3>
   </div>

@@ -1,6 +1,8 @@
 import type { Feature } from "../types/feature";
 
-export const FEATURES: Feature[] = [
+export const STATEMENT = "Expertise, Speed, and Targeted Solutions";
+
+export const LEFT_FEATURES: Feature[] = [
   {
     number: "01",
     title: "Experienced & Proven Team",
@@ -8,16 +10,19 @@ export const FEATURES: Feature[] = [
       "Our team brings deep expertise in delivering complex digital solutions for diverse industries.",
   },
   {
-    number: "02",
-    title: "Tailored to Your Business",
-    description:
-      "We design solutions based on your operational challenges and industry context.",
-  },
-  {
     number: "03",
     title: "Reliable & Scalable Technology",
     description:
       "We utilize technology architectures that support long-term growth and modernization.",
+  },
+];
+
+export const RIGHT_FEATURES: Feature[] = [
+  {
+    number: "02",
+    title: "Tailored to Your Business",
+    description:
+      "We design solutions based on your operational challenges and industry context.",
   },
   {
     number: "04",

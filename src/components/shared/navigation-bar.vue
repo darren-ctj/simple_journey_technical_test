@@ -26,33 +26,14 @@ function handleNavigationClick() {
 <template>
   <nav
     :class="[
-      // Base
-      'fixed left-[4%] top-[2%] z-[9998] flex w-[90vw] items-center justify-between transition-all duration-300',
-      // Mobile: < 380px
-      'max-[380px]:left-[1svh]',
-      'max-[380px]:w-[96vw]',
-      // Mobile: < 820px
-      'max-[819px]:left-[1.1svh]',
-      'max-[819px]:top-4',
-      'max-[819px]:w-[85vw]',
-      'max-[819px]:rounded-[90px]',
-      'max-[819px]:border',
-      'max-[819px]:border-navigation-border',
-      'max-[819px]:bg-[#ffffff0d]',
-      'max-[819px]:px-[1.2rem]',
-      'max-[819px]:py-[0.6rem]',
-      'max-[819px]:shadow-[0_4px_30px_#0000001a]',
-      // Tablet: > 820px and < 1000px
-      'min-[820px]:max-[1000px]:w-[100vw]',
-      // Desktop: >= 1280px
-      'min-[1280px]:left-[7%]',
-      'min-[1280px]:top-[3%]',
-      'min-[1280px]:w-[85vw]',
-      'min-[1280px]:rounded-[90px]',
-      'min-[1280px]:border',
-      'min-[1280px]:border-navigation-border',
-      'min-[1280px]:shadow-[0_4px_30px_#0000001a]',
-      // Scrolled state
+      'z-[9998] fixed left-1/2 -translate-x-1/2 top-4',
+      'w-[95vw] min-[1280px]:w-[85vw]',
+      'flex items-center justify-between',
+      'px-[1.2rem] py-[0.6rem] min-[1280px]:px-[2.5rem] min-[1280px]:py-[1.22rem]',
+      'max-[819px]:bg-white/5',
+      'border border-navigation-border rounded-[90px]',
+      'transition-all duration-300',
+      'shadow-[0_4px_30px_#0000001a]',
       isScrolled && [
         'overflow-hidden',
         '!bg-nav-surface/90',
@@ -60,20 +41,13 @@ function handleNavigationClick() {
       ],
     ]"
   >
-    <div
-      class="flex items-center gap-2.5 min-[1280px]:px-[1.2rem] min-[1280px]:py-[1.22rem]"
-    >
-      <img
-        src="/brand/logo-with-text.png"
-        alt="Simple Journey Indonesia Logo"
-        class="h-[50px] w-auto"
-      />
-    </div>
+    <img
+      src="/brand/logo-with-text.png"
+      alt="Simple Journey Indonesia Logo"
+      class="h-[50px] w-auto"
+    />
 
-    <div
-      class="flex items-center gap-4 max-[819px]:gap-1.5 min-[1280px]:px-10 min-[1280px]:py-4"
-    >
-      <!-- Desktop menu -->
+    <div class="flex items-center max-[819px]:gap-1.5 gap-4">
       <ul
         class="m-0 hidden list-none items-center justify-center gap-8 p-0 min-[1000px]:flex min-[1280px]:gap-16"
       >
@@ -99,12 +73,10 @@ function handleNavigationClick() {
         </li>
       </ul>
 
-      <!-- Call to action -->
       <RouterLink to="/contact" class="block min-[1000px]:hidden">
         <ContactButton />
       </RouterLink>
 
-      <!-- Hamburger icon -->
       <button
         type="button"
         aria-label="Toggle menu"
