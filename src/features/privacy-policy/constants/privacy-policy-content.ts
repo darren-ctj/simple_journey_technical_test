@@ -513,7 +513,7 @@ const indonesianContent: PrivacyPolicyTranslation = {
           segments: [
             {
               type: "text",
-              text: "Jika Anda memiliki pertanyaan, kekhawatiran, atau permintaan mengenai Kebijadan Privasi ini atau praktik data kami, jangan ragu untuk menghubungi kami:",
+              text: "Jika Anda memiliki pertanyaan, kekhawatiran, atau permintaan mengenai Kebijakan Privasi ini atau praktik data kami, jangan ragu untuk menghubungi kami:",
             },
           ],
         },

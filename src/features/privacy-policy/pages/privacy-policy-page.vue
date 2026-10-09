@@ -36,7 +36,7 @@ const translation = computed(
     />
 
     <div
-      class="box-content relative z-[2] max-w-[70vw] px-[15%] pt-[140px] pb-20 max-[640px]:px-5 max-[640px]:pt-[100px]"
+      class="box-content relative z-[2] max-[640px]:w-[calc(100vw-40px)] w-[70vw] max-[640px]:px-5 max-[640px]:pt-[100px] px-[15%] pt-[140px] pb-20"
     >
       <div class="mb-6">
         <BreadcrumbNavigation :items="BREADCRUMB_ITEMS" />

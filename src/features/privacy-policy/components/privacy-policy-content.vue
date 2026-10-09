@@ -2,30 +2,23 @@
 import { motion } from "motion-v";
 import TextSegments from "./text-segments.vue";
 import type { PrivacyPolicySection } from "../types/privacy-policy";
+import {
+  HEADING_CLASS,
+  PARAGRAPH_CLASS,
+  LIST_CLASS,
+  LIST_ITEM_CLASS,
+  CONTACT_PARAGRAPH_CLASS,
+} from "../constants/classes";
 
 defineProps<{
   sections: PrivacyPolicySection[];
 }>();
-
-/**
- * Shared class sets that mirror the repeated descendant rules of
- * the original `.content-section` styles.
- */
-const headingClass =
-  "mb-4 mt-0 border-b border-white/5 pb-2 text-[22px] font-semibold text-white max-[640px]:text-lg";
-const paragraphClass =
-  "mb-4 mt-0 text-base leading-[1.7] text-navigation-foreground opacity-85 max-[640px]:text-sm";
-const listClass = "mb-4 mt-0 list-none pl-5";
-const listItemClass =
-  "mb-2.5 text-[15px] leading-[1.7] text-navigation-foreground opacity-85 max-[640px]:text-sm";
-const contactParagraphClass =
-  "mb-2.5 mt-0 text-[15px] leading-[1.7] text-navigation-foreground opacity-85 last:mb-0";
 </script>
 
 <template>
-  <div class="content-body">
+  <div>
     <article
-      class="rounded-[20px] border border-white/4 bg-nav-surface/20 p-10 shadow-[0_20px_40px_#0003] backdrop-blur-[20px] max-[1024px]:p-[30px] max-[640px]:p-5"
+      class="rounded-[20px] border border-white/4 bg-nav-surface/20 max-[640px]:p-5max-[1024px]:p-[30px] p-10 backdrop-blur-[20px] shadow-[0_20px_40px_#0003]"
     >
       <motion.div
         :initial="{ opacity: 0, y: 10 }"
@@ -36,23 +29,23 @@ const contactParagraphClass =
           v-for="section in sections"
           :id="section.id"
           :key="section.id"
-          class="content-section mb-10 last:mb-0"
+          class="mb-10 last:mb-0 scroll-mt-[8rem]"
         >
-          <h2 :class="headingClass">{{ section.heading }}</h2>
+          <h2 :class="HEADING_CLASS">{{ section.heading }}</h2>
 
           <template
             v-for="(block, blockIndex) in section.blocks"
             :key="blockIndex"
           >
-            <p v-if="block.kind === 'paragraph'" :class="paragraphClass">
+            <p v-if="block.kind === 'paragraph'" :class="PARAGRAPH_CLASS">
               <TextSegments :segments="block.segments" />
             </p>
 
-            <ul v-else-if="block.kind === 'list'" :class="listClass">
+            <ul v-else-if="block.kind === 'list'" :class="LIST_CLASS">
               <li
                 v-for="(item, itemIndex) in block.items"
                 :key="itemIndex"
-                :class="listItemClass"
+                :class="LIST_ITEM_CLASS"
               >
                 <TextSegments :segments="item" />
               </li>
@@ -60,12 +53,12 @@ const contactParagraphClass =
 
             <div
               v-else
-              class="mt-5 rounded-xl border border-[#1e88ff26] bg-[#1e88ff0a] p-6"
+              class="mt-5 rounded-xl border border-primary/15 bg-primary/4 p-6"
             >
               <p
                 v-for="(paragraph, paragraphIndex) in block.paragraphs"
                 :key="paragraphIndex"
-                :class="contactParagraphClass"
+                :class="CONTACT_PARAGRAPH_CLASS"
               >
                 <TextSegments :segments="paragraph" />
               </p>
