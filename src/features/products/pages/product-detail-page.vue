@@ -4,6 +4,7 @@ import { useRoute, useRouter } from "vue-router";
 import ProductDetailHero from "../components/product-detail-hero.vue";
 import OtherProductsSection from "../components/other-products-section.vue";
 import { PRODUCTS } from "../constants/product";
+import { BREADCRUMB_ITEMS } from "../constants/breadcrumb.ts";
 
 const route = useRoute();
 
@@ -18,8 +19,7 @@ const product = computed(() => {
 });
 
 const breadcrumbItems = computed(() => [
-  { label: "Home", to: "/" },
-  { label: "Products", to: "/products" },
+  ...BREADCRUMB_ITEMS,
   { label: product.value?.title ?? "", to: route.path },
 ]);
 

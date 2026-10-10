@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive } from "vue";
-import type { ProductDetailSection } from "../constants/product-detail";
+import type { ProductDetailSection } from "../types/product-detail";
 
 defineProps<{
   sections: ProductDetailSection[];
@@ -30,7 +30,9 @@ function handleSectionToggle(id: string) {
         @click="handleSectionToggle(section.id)"
       >
         <h3 class="m-0 text-lg font-bold">{{ section.title }}</h3>
-        <span class="text-xl">{{ isSectionExpanded(section.id) ? "−" : "+" }}</span>
+        <span class="text-xl">{{
+          isSectionExpanded(section.id) ? "−" : "+"
+        }}</span>
       </div>
 
       <Transition
