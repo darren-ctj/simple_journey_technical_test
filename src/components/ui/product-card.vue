@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  badge: string;
+  badges: string[];
   image: string;
   title: string;
 }>();
@@ -15,11 +15,14 @@ defineProps<{
       class="relative my-4 h-[30rem] overflow-hidden rounded-[16px] bg-white/10 shadow-[0_4px_30px_#0000001a] backdrop-blur-[1.4px]"
       :class="['max-[768px]:max-h-[35vh]']"
     >
-      <span
-        class="absolute left-[2%] top-[3%] rounded-[12px] bg-[#323232] px-3 py-1 text-xs text-white"
-      >
-        {{ badge }}
-      </span>
+      <div class="absolute left-[2%] top-[3%] flex flex-row gap-2">
+        <span
+          v-for="badge in badges"
+          class="rounded-[12px] bg-[#323232] px-3 py-1 text-xs text-white"
+        >
+          {{ badge }}
+        </span>
+      </div>
 
       <img
         :src="image"

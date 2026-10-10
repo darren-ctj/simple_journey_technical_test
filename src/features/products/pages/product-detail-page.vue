@@ -45,16 +45,9 @@ watch(
 
 <template>
   <div v-if="product">
-    <ProductDetailHero
-      :product="product"
-      :breadcrumb-items="breadcrumbItems"
-    />
+    <ProductDetailHero :product="product" :breadcrumb-items="breadcrumbItems" />
 
     <section class="section min-h-[100vh] p-[50px_100px]">
-      <!--
-        Absolutely positioned against the initial containing block (no
-        positioned ancestor), matching the original `.product-style` rules.
-      -->
       <div
         class="product-style absolute left-[4.5%] top-[40%] z-[6666] w-[90%] max-[768px]:left-[5%] max-[768px]:top-[45%] min-[1280px]:left-[7%] min-[1280px]:w-[96%]"
       >
