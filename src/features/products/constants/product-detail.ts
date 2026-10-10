@@ -1,16 +1,5 @@
-export interface ProductDetailSection {
-  id: string;
-  title: string;
-  /** Body copy for prose sections. */
-  paragraph?: string;
-  /** Bullet items for list sections. */
-  items?: string[];
-}
+import type { ProductDetailSection } from "../types/product-detail";
 
-/**
- * Detail page content keyed by product slug. Products without an entry
- * render the page without the specifications accordion.
- */
 export const PRODUCT_DETAILS: Record<string, ProductDetailSection[]> = {
   "smart-meter": [
     {

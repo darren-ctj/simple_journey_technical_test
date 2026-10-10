@@ -9,7 +9,7 @@ import { BREADCRUMB_ITEMS } from "../constants/breadcrumb";
   <section
     :class="[
       'box-content',
-      'hero relative overflow-visible',
+      'relative overflow-visible',
       'min-h-[900px]',
       'bg-[url(/features/services/bg-1.webp)] bg-cover bg-center bg-no-repeat',
       'px-20 pb-20 pt-[140px]',
