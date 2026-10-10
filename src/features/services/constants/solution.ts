@@ -10,19 +10,19 @@ export const SOLUTIONS: Solution[] = [
   {
     label: "Digital Solution",
     description:
-      "Drive innovation and efficiency with our digital transformation services. We provide custom software development, enterprise applications, automation, and AI-driven solutions to enhance productivity and customer experience in the digital era.",
+      "Accelerate your digital transformation through modern applications, automation, and data-driven platforms that enhance efficiency and innovation.",
     video: "/features/home/services/digital-solution.webm",
   },
   {
     label: "Cross Industry Solution",
     description:
-      "We deliver tailored technology solutions across industries, including finance, healthcare, retail, and manufacturing. Our expertise in industry-specific challenges allows us to create scalable, future-ready digital ecosystems that drive business growth.",
+      "Delivering adaptable solutions across industries by combining best practices, technology expertise, and scalable architectures.",
     video: "/features/home/services/cross-industry.webm",
   },
   {
     label: "IT Operation Service",
     description:
-      "Ensure seamless IT operations with our end-to-end managed services. From IT support, cloud management, and cybersecurity to proactive monitoring and disaster recovery, we help you maintain high availability, security, and operational efficiency—without the hassle.",
+      "Ensure business continuity with proactive monitoring, maintenance, and optimization of your IT operations.",
     video: "/features/home/services/it-operation.webm",
   },
 ];

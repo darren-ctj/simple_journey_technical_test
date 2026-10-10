@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="image flex flex-1 justify-center">
+  <div class="flex flex-1 justify-center">
     <video
       v-for="(solution, index) in solutions"
       :key="solution.video"
@@ -17,7 +17,7 @@ defineProps<{
       autoplay
       loop
       playsinline
-      class="block w-full rounded-[12px] object-contain"
+      class="block rounded-[12px] object-contain"
     />
   </div>
 </template>

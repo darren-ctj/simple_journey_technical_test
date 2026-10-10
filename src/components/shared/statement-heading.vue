@@ -16,7 +16,7 @@ withDefaults(defineProps<StatementHeadingProps>(), {
 <template>
   <section
     :class="[
-      'relative z-[100] min-h-[200px]',
+      'relative z-[100]',
       align === 'left' ? 'text-left' : 'text-center',
     ]"
   >

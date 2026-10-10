@@ -102,7 +102,7 @@ const cardAnimations = SERVICES.map((_, index) => {
               ]"
             >
               <template v-if="service.imageFirst">
-                <div class="image flex flex-1 justify-center">
+                <div class="flex flex-1 justify-center">
                   <video
                     :src="`/features/home/services${service.video}`"
                     autoplay
@@ -112,7 +112,7 @@ const cardAnimations = SERVICES.map((_, index) => {
                   />
                 </div>
 
-                <div class="content flex-1">
+                <div class="flex-1">
                   <h2
                     class="mb-5 text-[clamp(2rem,2.8vw,2.25rem)] font-medium leading-[150%] tracking-[-0.5px] max-[768px]:text-xl"
                   >
@@ -128,7 +128,7 @@ const cardAnimations = SERVICES.map((_, index) => {
               </template>
 
               <template v-else>
-                <div class="content flex-1">
+                <div class="flex-1">
                   <h2
                     class="mb-5 text-[clamp(2rem,2.8vw,2.25rem)] font-medium leading-[150%] tracking-[-0.5px] max-[768px]:text-xl"
                   >
@@ -142,7 +142,7 @@ const cardAnimations = SERVICES.map((_, index) => {
                   </p>
                 </div>
 
-                <div class="image flex flex-1 justify-center">
+                <div class="flex flex-1 justify-center">
                   <video
                     :src="`/features/home/services${service.video}`"
                     autoplay

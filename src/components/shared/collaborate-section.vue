@@ -5,11 +5,10 @@ import ContactButton from "@/components/ui/contact-button.vue";
 
 <template>
   <section
-    class="relative box-content flex min-h-[220px] max-w-full items-center overflow-hidden bg-[url(/features/products/cta-section-bg.webp)] bg-cover bg-center bg-no-repeat p-12 text-white max-[768px]:p-5"
+    class="relative box-content flex min-h-[220px] max-w-full items-center overflow-hidden bg-[url(/features/products/cta-section-bg.webp)] bg-cover bg-center bg-no-repeat px-18 py-12 text-white max-[768px]:p-5"
   >
-    <!-- Placeholder background: replace with /collaborate.jpg asset when available -->
     <div
-      class="overlay absolute inset-0 bg-[linear-gradient(90deg,#000000bf_0%,#0000008c_40%,#00000040_100%)]"
+      class="absolute inset-0 bg-[linear-gradient(90deg,#000000bf_0%,#0000008c_40%,#00000040_100%)]"
     />
 
     <div
@@ -17,7 +16,7 @@ import ContactButton from "@/components/ui/contact-button.vue";
     >
       <div class="max-w-[700px] text-left max-[768px]:max-w-full">
         <motion.h1
-          class="mb-3 font-medium text-[clamp(2rem,2.8vw,2.25rem)] max-[768px]:text-xl"
+          class="mb-3 mt-6 text-[clamp(2rem,2.8vw,2.25rem)] font-medium max-[768px]:text-xl"
           :initial="{ opacity: 0 }"
           :animate="{ opacity: 1 }"
           :transition="{ duration: 1, delay: 0.3 }"
@@ -26,7 +25,7 @@ import ContactButton from "@/components/ui/contact-button.vue";
         </motion.h1>
 
         <motion.p
-          class="max-w-[600px] text-base leading-[175%] tracking-[2%] max-[768px]:max-w-[80%] max-[768px]:text-sm"
+          class="mb-4 max-w-[600px] text-base leading-[175%] tracking-[2%] max-[768px]:max-w-[80%] max-[768px]:text-sm"
           :initial="{ opacity: 0 }"
           :animate="{ opacity: 1 }"
           :transition="{ duration: 1, delay: 0.7 }"

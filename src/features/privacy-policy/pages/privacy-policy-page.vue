@@ -38,9 +38,7 @@ const translation = computed(
     <div
       class="box-content relative z-[2] max-[640px]:w-[calc(100vw-40px)] w-[70vw] max-[640px]:px-5 max-[640px]:pt-[100px] px-[15%] pt-[140px] pb-20"
     >
-      <div class="mb-6">
-        <BreadcrumbNavigation :items="BREADCRUMB_ITEMS" />
-      </div>
+      <BreadcrumbNavigation :items="BREADCRUMB_ITEMS" />
 
       <header class="mb-12 text-left max-[640px]:mb-8">
         <h1

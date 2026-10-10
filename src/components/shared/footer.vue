@@ -5,7 +5,7 @@ import { SOCIAL_LINKS } from "@/constants/link";
 <template>
   <footer
     :class="[
-      'content-box bg-footer',
+      'box-content bg-footer',
       // < 768px
       'max-[768px]:p-5',
       // 768px - 1280px
