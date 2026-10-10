@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <nav class="mb-10 flex items-center gap-2 text-sm text-[#d6e3ff]">
+  <nav class="mb-10 mt-3.5 flex items-center gap-2 text-sm text-[#d6e3ff]">
     <template v-for="(item, index) in items" :key="item.to">
       <img
         v-if="index > 0"

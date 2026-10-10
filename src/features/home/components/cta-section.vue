@@ -5,23 +5,26 @@ import ContactButton from "@/components/ui/contact-button.vue";
 
 <template>
   <div>
-    <div
-      class="relative z-[1] flex items-center justify-between"
+    <section
       :class="[
-        'p-[2.5rem_10rem]',
+        'box-content',
+        'relative z-[1] flex',
         'max-[768px]:p-5',
         'max-[768px]:flex-col',
         'max-[768px]:items-start',
         'max-[768px]:gap-4',
+        'p-[3.5rem_10rem]',
+        'items-center justify-between',
       ]"
     >
-      <div class="text max-w-[700px]" :class="['max-[768px]:max-w-[100vw]']">
+      <div class="max-w-[700px] max-[768px]:max-w-[100vw]">
         <motion.h1
-          class="text-[28px] font-bold leading-[150%]"
           :class="[
+            'text-[28px] font-bold leading-[150%] mb-4.5',
             'max-[768px]:text-xl',
             'max-[768px]:font-medium',
             'max-[768px]:tracking-[-0.5px]',
+            'max-[768px]:mb-3.5',
           ]"
           :initial="{ opacity: 0 }"
           :animate="{ opacity: 1 }"
@@ -38,8 +41,8 @@ import ContactButton from "@/components/ui/contact-button.vue";
         </motion.h1>
 
         <motion.p
-          class="max-w-[500px] text-sm leading-[175%] tracking-[2%]"
           :class="[
+            'max-w-[500px] text-sm leading-[175%] tracking-[2%]',
             'max-[768px]:max-w-[100vw]',
             'max-[768px]:text-xs',
             'max-[768px]:tracking-normal',
@@ -76,7 +79,7 @@ import ContactButton from "@/components/ui/contact-button.vue";
           <ContactButton label="Let's Get Started" />
         </RouterLink>
       </motion.div>
-    </div>
+    </section>
 
     <section
       class="box-content relative flex min-h-[420px] max-w-full items-center overflow-hidden bg-[url(/features/home/cta-section-bg.webp)] bg-cover bg-center bg-no-repeat p-[3rem_4rem]"

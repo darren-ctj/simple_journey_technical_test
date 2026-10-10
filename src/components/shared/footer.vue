@@ -4,39 +4,63 @@ import { SOCIAL_LINKS } from "@/constants/link";
 
 <template>
   <footer
-    class="bg-footer max-[768px]:p-5 p-[40px_80px_24px] min-[1280px]:p-[40px_9rem_24px]"
+    :class="[
+      'content-box bg-footer',
+      // < 768px
+      'max-[768px]:p-5',
+      // 768px - 1280px
+      'p-[40px_80px_24px]',
+      // > 1280px
+      'min-[1280px]:p-[40px_9rem_24px]',
+    ]"
   >
     <div>
       <div>
-        <div class="logo flex items-center gap-2.5 text-xl font-semibold">
+        <div :class="['flex items-center gap-2.5', 'text-xl font-semibold']">
           <img
             src="/brand/logo.svg"
             alt="Simple Journey"
-            class="h-20 w-20 max-[768px]:h-[50px] max-[768px]:w-[50px]"
+            :class="['h-20 w-20', 'max-[768px]:h-[50px] max-[768px]:w-[50px]']"
           />
+
           <span
-            class="text-[3rem] text-footer-accent max-[768px]:text-[35px] max-[768px]:font-semibold max-[768px]:leading-[175%] max-[768px]:tracking-[-2%]"
+            :class="[
+              'text-[3rem] text-footer-accent',
+              'max-[768px]:text-[35px]',
+              'max-[768px]:font-semibold',
+              'max-[768px]:leading-[175%]',
+              'max-[768px]:tracking-[-2%]',
+            ]"
           >
             Simple Journey
           </span>
         </div>
-        <div
-          class="set-flex mt-4 flex w-full justify-between max-[768px]:flex-col max-[768px]:gap-4"
+
+        <p
+          :class="[
+            'mt-7 w-full max-w-[500px]',
+            'text-base leading-[1.6] text-white opacity-75',
+            'max-[768px]:text-sm',
+            'max-[768px]:font-normal',
+            'max-[768px]:leading-[175%]',
+            'max-[768px]:tracking-[2%]',
+          ]"
         >
-          <p
-            class="address mt-3 max-w-[500px] text-white text-base leading-[1.6] opacity-75 max-[768px]:text-sm max-[768px]:font-normal max-[768px]:leading-[175%] max-[768px]:tracking-[2%]"
-          >
-            Ruko Cendana, Jl. Benteng Betawi No.37, RT.004/RW.015, Tanah Tinggi,
-            Kec. Tangerang, Kota Tangerang, Banten 15119
-          </p>
-        </div>
+          Ruko Cendana, Jl. Benteng Betawi No.37, RT.004/RW.015, Tanah Tinggi,
+          Kec. Tangerang, Kota Tangerang, Banten 15119
+        </p>
       </div>
     </div>
 
-    <div class="my-8 mb-4 h-px bg-divider" />
+    <div class="my-12 mb-4 h-px bg-divider" />
 
     <div
-      class="flex items-center justify-between max-[768px]:flex-col max-[768px]:gap-3 max-[768px]:text-center"
+      :class="[
+        'flex items-center justify-between',
+        'max-[768px]:flex-col',
+        'max-[768px]:gap-3',
+        'max-[768px]:text-center',
+      ]"
     >
       <span class="text-sm text-white">
         © 2026 PT Simple Journey. All Rights Reserved. |

@@ -2,7 +2,6 @@
 
 @theme {
   --font-sans: "Noto Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
-
   /* brand */
   --color-primary: #1e88ff;
   --color-primary-strong: #1466a8;
@@ -24,7 +23,6 @@
   --color-muted-slate: #cbd5e1;
   --color-muted-periwinkle: #cbd5f5;
   --color-footer-link: #98a2b3;
-
   /* shadows */
   --shadow-glass-card:
     0 8px 32px #0000001a, inset 0 1px 0 #ffffff80, inset 0 -1px 0 #ffffff1a,
@@ -61,34 +59,6 @@
   h5,
   h6 {
     font-weight: bold;
-  }
-
-  h1 {
-    margin-block: 0.67em;
-  }
-
-  h2 {
-    margin-block: 0.83em;
-  }
-
-  h3 {
-    margin-block: 1em;
-  }
-
-  h4 {
-    margin-block: 1.33em;
-  }
-
-  h5 {
-    margin-block: 1.67em;
-  }
-
-  h6 {
-    margin-block: 2.33em;
-  }
-
-  p {
-    margin-block: 1em;
   }
 
   button {

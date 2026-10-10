@@ -7,6 +7,7 @@ import ProductCard from "@/components/ui/product-card.vue";
 <template>
   <section
     :class="[
+      'box-content',
       'relative bg-[url(/features/home/solutions-section-bg.webp)]',
       'bg-cover bg-center bg-no-repeat text-white',
       'p-[2.5rem_10rem]',

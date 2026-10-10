@@ -37,7 +37,9 @@ withDefaults(defineProps<StatementHeadingProps>(), {
           class="size-[14px] object-contain"
         />
 
-        <span class="text-base max-[640px]:text-xs text-brand-blue">
+        <span
+          class="text-base max-[640px]:text-xs max-[640px]:font-bold text-brand-blue"
+        >
           {{ brand }}
         </span>
       </motion.div>
@@ -45,11 +47,11 @@ withDefaults(defineProps<StatementHeadingProps>(), {
       <motion.h1
         class="max-[1024px]:my-3 my-6 font-sans text-[clamp(2rem,2.8vw,2.25rem)] font-medium leading-[150%] tracking-[-0.5px]"
         :class="[
-          // <= 1024px
-          'max-[1024px]:text-[24px]',
           // <= 640px
           'max-[640px]:text-[20px]',
           'max-[640px]:leading-[1.6]',
+          // <= 1024px
+          'max-[1024px]:text-[24px]',
         ]"
         :initial="{ opacity: 0 }"
         :animate="{ opacity: 1 }"
