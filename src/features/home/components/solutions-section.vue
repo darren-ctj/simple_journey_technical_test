@@ -5,118 +5,114 @@ import ProductCard from "@/components/ui/product-card.vue";
 </script>
 
 <template>
-  <section
+  <div
     :class="[
-      'box-content',
-      'relative bg-[url(/features/home/solutions-section-bg.webp)]',
-      'bg-cover bg-center bg-no-repeat text-white',
-      'p-[2.5rem_10rem]',
-      'max-[768px]:p-5',
+      'relative',
+      'bg-[url(/features/home/solutions-section-bg.webp)]',
+      'bg-cover bg-center bg-no-repeat',
     ]"
   >
     <div
       class="absolute inset-0 z-[1] bg-[radial-gradient(circle,#050c148c_0%,#050c14e6_70%)]"
     />
 
-    <div
-      class="mb-6 flex items-center justify-between"
+    <section
       :class="[
-        'max-[768px]:mb-0',
-        'max-[768px]:flex-col',
-        'max-[768px]:items-center',
-        'max-[768px]:justify-start',
-        'max-[768px]:gap-3',
+        'container-narrow relative z-[2] text-white',
+        'max-md:py-5',
+        'py-10',
       ]"
     >
-      <div class="max-w-1/2" :class="['max-[768px]:max-w-full']">
-        <StatementHeading
-          brand="OUR SOLUTIONS"
-          statement="Delivering scalable digital solutions that support operational excellence"
-          align="left"
-        />
-      </div>
-
       <div
-        class="relative z-[5] max-w-[23%] leading-[2]"
         :class="[
-          'max-[768px]:mb-8',
-          'max-[768px]:mt-[-6rem]',
-          'max-[768px]:max-w-full',
+          'mb-6 flex items-center justify-between',
+          'max-md:mb-0 max-md:flex-col max-md:items-center',
+          'max-md:justify-start max-md:gap-3',
         ]"
       >
-        <motion.p
-          :initial="{ opacity: 0 }"
-          :whileInView="{ opacity: 1 }"
-          :transition="{
-            duration: 1,
-            delay: 1,
-          }"
-          :in-view-options="{
-            once: true,
-            amount: 0.2,
-          }"
+        <div class="max-w-1/2 max-md:max-w-full">
+          <StatementHeading
+            brand="OUR SOLUTIONS"
+            statement="Delivering scalable digital solutions that support operational excellence"
+            align="left"
+          />
+        </div>
+
+        <div
           :class="[
-            'max-[768px]:w-full',
-            'max-[768px]:text-xs',
-            'max-[768px]:font-normal',
-            'max-[768px]:leading-[175%]',
-            'max-[768px]:tracking-normal',
+            'relative z-[5] max-w-[23%] leading-loose',
+            'max-md:mt-[-6rem] max-md:mb-8 max-md:max-w-full',
           ]"
         >
-          Our products are developed to help organizations streamline processes,
-          enhance efficiency, and adopt modern digital capabilities.
-        </motion.p>
+          <motion.p
+            :initial="{ opacity: 0 }"
+            :whileInView="{ opacity: 1 }"
+            :transition="{
+              duration: 1,
+              delay: 1,
+            }"
+            :in-view-options="{
+              once: true,
+              amount: 0.2,
+            }"
+            class="max-md:w-full max-md:text-xs max-md:font-normal max-md:leading-relaxed max-md:tracking-normal"
+          >
+            Our products are developed to help organizations streamline
+            processes, enhance efficiency, and adopt modern digital
+            capabilities.
+          </motion.p>
+        </div>
       </div>
-    </div>
 
-    <motion.div
-      class="relative z-[5] grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12"
-      :initial="{ opacity: 0 }"
-      :whileInView="{ opacity: 1 }"
-      :transition="{
-        duration: 1,
-        delay: 1.5,
-      }"
-      :in-view-options="{
-        once: true,
-        amount: 0.2,
-      }"
-    >
-      <RouterLink to="/products/seamless-passenger">
-        <ProductCard
-          :badges="['Software']"
-          image="/features/home/solutions/seamless-passenger.png"
-          title="Seamless Passenger"
-        />
-      </RouterLink>
-
-      <RouterLink to="/products/passport-issuance">
-        <ProductCard
-          :badges="['Software']"
-          image="/features/home/solutions/passport-issuance.png"
-          title="Passport Issuance"
-        />
-      </RouterLink>
-    </motion.div>
-
-    <RouterLink
-      to="/products"
-      class="relative z-[3] mt-6 inline-block text-brand-blue no-underline"
-    >
-      <motion.span
+      <motion.div
+        class="relative z-[5] grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12"
         :initial="{ opacity: 0 }"
         :whileInView="{ opacity: 1 }"
         :transition="{
           duration: 1,
-          delay: 0.7,
+          delay: 1.5,
         }"
         :in-view-options="{
           once: true,
           amount: 0.2,
         }"
       >
-        View More →
-      </motion.span>
-    </RouterLink>
-  </section>
+        <RouterLink to="/products/seamless-passenger">
+          <ProductCard
+            :badges="['Software']"
+            image="/features/home/solutions/seamless-passenger.png"
+            title="Seamless Passenger"
+          />
+        </RouterLink>
+
+        <RouterLink to="/products/passport-issuance">
+          <ProductCard
+            :badges="['Software']"
+            image="/features/home/solutions/passport-issuance.png"
+            title="Passport Issuance"
+          />
+        </RouterLink>
+      </motion.div>
+
+      <RouterLink
+        to="/products"
+        class="relative z-[3] mt-6 inline-block text-brand-blue no-underline"
+      >
+        <motion.span
+          :initial="{ opacity: 0 }"
+          :whileInView="{ opacity: 1 }"
+          :transition="{
+            duration: 1,
+            delay: 0.7,
+          }"
+          :in-view-options="{
+            once: true,
+            amount: 0.2,
+          }"
+        >
+          View More →
+        </motion.span>
+      </RouterLink>
+    </section>
+  </div>
 </template>

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Override and extend tailwindcss utilities */
 @theme {
   --font-sans: "Noto Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* brand */
@@ -29,10 +30,20 @@
     inset 0 0 4px 2px #fff3;
 }
 
+/* @utility */
+@utility container-narrow {
+  @apply w-screen max-w-6xl mx-auto px-4 sm:px-6 md:px-10 lg:px-12;
+}
+
+@utility container-wide {
+  @apply w-screen max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-12;
+}
+
 @utility bg-gradient-primary {
   background: linear-gradient(135deg, #1e88ff, #1466a8);
 }
 
+/* @layer */
 @layer base {
   :root {
     color-scheme: light dark;

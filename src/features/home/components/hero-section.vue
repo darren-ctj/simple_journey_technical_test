@@ -3,20 +3,9 @@ import { motion } from "motion-v";
 </script>
 
 <template>
-  <section
-    :class="[
-      'relative',
-      'box-content overflow-hidden text-white',
-      'min-h-[90vh] p-[8.75rem_5rem_5rem]',
-      // <= 1024px
-      'max-[1024px]:p-[7.5rem_2.5rem_3.75rem]',
-      // <= 640px
-      'max-[640px]:min-h-[80vh]',
-      'max-[640px]:p-[6.25rem_1.5rem_3.125rem]',
-    ]"
-  >
+  <div class="relative">
     <video
-      class="absolute inset-0 z-0 h-full w-full object-cover"
+      class="absolute inset-0 z-0 size-full object-cover"
       autoplay
       loop
       muted
@@ -28,70 +17,64 @@ import { motion } from "motion-v";
 
     <div class="absolute inset-0 z-[1] bg-panel/50" />
 
-    <div class="relative z-[2] max-w-[70vw] px-[15%]">
-      <div
-        class="absolute left-[3%] top-[37rem] flex w-[85vw] items-center justify-between gap-12"
-        :class="[
-          // <= 1024px
-          'max-[1024px]:flex-col',
-          'max-[1024px]:items-start',
-          // <= 640px
-          'max-[640px]:left-0',
-          'max-[640px]:top-[37vh]',
-          'max-[640px]:w-[95vw]',
-          'max-[640px]:gap-4',
-        ]"
+    <section
+      :class="[
+        'container-wide relative z-[2] text-white flex h-screen',
+        // < 640px
+        'max-sm:pb-12',
+        // < 1024px
+        'max-lg:flex-col max-lg:items-start max-lg:justify-end',
+        'max-lg:pb-15',
+        // > 1024px
+        'items-end justify-between gap-4',
+        'pb-20',
+      ]"
+    >
+      <motion.div
+        class="max-lg:max-w-[95%] max-w-1/2"
+        :initial="{ y: 1000, opacity: 0 }"
+        :animate="{ y: 0, opacity: 1 }"
+        :transition="{
+          duration: 1,
+          ease: 'easeOut',
+        }"
       >
-        <!-- Left: Heading -->
-        <motion.div
-          class="max-w-1/2 max-[1024px]:max-w-[95%]"
-          :initial="{ y: 1000, opacity: 0 }"
-          :animate="{ y: 0, opacity: 1 }"
-          :transition="{
-            duration: 1,
-            ease: 'easeOut',
-          }"
+        <span
+          class="text-5xl font-medium leading-normal"
+          :class="[
+            // < 1024px
+            'max-lg:text-[4vh]',
+            // < 640px
+            'max-sm:text-3xl',
+          ]"
         >
-          <span
-            class="text-[clamp(2.5rem,3.3vw,3rem)] font-medium leading-[150%]"
-            :class="[
-              // <= 1024px
-              'max-[1024px]:text-[4vh]',
-              // <= 640px
-              'max-[640px]:text-[30px]',
-            ]"
-          >
-            Accelerating Your Digital Transformation
-          </span>
-        </motion.div>
+          Accelerating Your Digital Transformation
+        </span>
+      </motion.div>
 
-        <!-- Right: Description -->
-        <motion.div
-          class="flex max-w-[380px] justify-end max-[1024px]:max-w-full"
-          :initial="{ y: 1000, opacity: 0 }"
-          :animate="{ y: 0, opacity: 1 }"
-          :transition="{
-            duration: 1,
-            delay: 0.2,
-            ease: 'easeOut',
-          }"
+      <motion.div
+        class="flex justify-end max-lg:max-w-full max-w-[380px]"
+        :initial="{ y: 1000, opacity: 0 }"
+        :animate="{ y: 0, opacity: 1 }"
+        :transition="{
+          duration: 1,
+          delay: 0.2,
+          ease: 'easeOut',
+        }"
+      >
+        <span
+          class="text-base leading-7"
+          :class="[
+            // < 1024px
+            'max-lg:font-normal max-lg:leading-relaxed',
+            // < 640px
+            'max-sm:text-sm',
+          ]"
         >
-          <span
-            class="text-base leading-[1.7]"
-            :class="[
-              // <= 1024px
-              'max-[1024px]:font-normal',
-              'max-[1024px]:leading-[175%]',
-              'max-[1024px]:tracking-[2%]',
-              // <= 640px
-              'max-[640px]:text-sm',
-            ]"
-          >
-            Enterprise-grade solutions for scalable,<br />
-            secure, and future-ready systems.
-          </span>
-        </motion.div>
-      </div>
-    </div>
-  </section>
+          Enterprise-grade solutions for scalable,<br />
+          secure, and future-ready systems.
+        </span>
+      </motion.div>
+    </section>
+  </div>
 </template>
