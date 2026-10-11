@@ -22,6 +22,7 @@ const translation = computed(
       autoplay
       loop
       playsinline
+      preload="auto"
     >
       <source src="/features/privacy-policy/bg.webm" type="video/webm" />
       Your browser does not support the video tag.

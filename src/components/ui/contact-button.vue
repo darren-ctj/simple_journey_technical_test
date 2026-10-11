@@ -18,7 +18,7 @@ withDefaults(defineProps<{ label?: string }>(), {
         fetchpriority="high"
         src="/icons/right-arrow.webp"
         alt="Right Arrow"
-        class="translate-x-0 transition-transform duration-500 ease-out group-hover:-translate-x-2.5"
+        class="size-6 translate-x-0 transition-transform duration-500 ease-out group-hover:-translate-x-2.5"
       />
     </span>
   </button>

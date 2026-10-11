@@ -45,7 +45,7 @@ function handleNavigationClick() {
           fetchpriority="high"
           src="/brand/logo-with-text.webp"
           alt="Simple Journey Indonesia Logo"
-          class="h-[50px] w-auto"
+          class="h-[50px] w-[88px]"
         />
 
         <div class="flex items-center gap-1.5 md:gap-4">

@@ -17,7 +17,7 @@ defineProps<{
         src="/icons/diamond-white.webp"
         alt=""
         aria-hidden="true"
-        class="h-2.5 w-auto"
+        class="h-2.5 w-2.5"
       />
 
       <RouterLink

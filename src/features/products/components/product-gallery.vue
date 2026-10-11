@@ -28,20 +28,16 @@ function handlePagerNextClick() {
 </script>
 
 <template>
-  <div>
-    <div
-      class="rounded-2xl border border-white/5 bg-white/5 shadow-[0_4px_30px_#0000001a] backdrop-blur-[6.5px]"
-      :title="product.title"
-    >
-      <div class="relative overflow-hidden rounded-[12px]">
-        <img
-          fetchpriority="high"
-          :src="`/features/products/${galleryImages[activeIndex]}`"
-          :alt="product.title"
-          class="block h-full w-full rounded-[12px] object-contain"
-        />
-      </div>
-    </div>
+  <div
+    class="rounded-2xl border border-white/5 bg-white/5 shadow-[0_4px_30px_#0000001a] backdrop-blur-[6.5px]"
+    :title="product.title"
+  >
+    <img
+      fetchpriority="high"
+      :src="`/features/products/${galleryImages[activeIndex]}`"
+      :alt="product.title"
+      class="block h-full w-full rounded-[12px] object-contain"
+    />
   </div>
 
   <div class="mt-5 grid w-full grid-cols-4 gap-[1.4rem] max-[768px]:hidden">

@@ -14,6 +14,7 @@ defineProps<{
       :key="solution.video"
       v-show="index === activeIndex"
       :src="solution.video"
+      preload="auto"
       autoplay
       muted
       loop
