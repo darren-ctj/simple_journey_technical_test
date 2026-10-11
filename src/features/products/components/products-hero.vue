@@ -31,20 +31,7 @@ const filteredProducts = computed(() => {
 </script>
 
 <template>
-  <section
-    :class="[
-      'box-content',
-      'relative overflow-hidden',
-      'min-h-[100vh]',
-      'px-20 pb-20 pt-[140px] text-white',
-      // < 640px
-      'max-[640px]:px-6',
-      'max-[640px]:pb-[50px] max-[640px]:pt-[100px]',
-      // < 1024px
-      'max-[1024px]:px-10',
-      'max-[1024px]:pb-[60px] max-[1024px]:pt-[120px]',
-    ]"
-  >
+  <div class="relative min-h-[100vh]">
     <div
       class="absolute left-0 top-0 w-screen h-screen z-0 bg-[url(/features/products/hero-section-bg.webp)] bg-cover bg-center bg-no-repeat"
     />
@@ -59,11 +46,19 @@ const filteredProducts = computed(() => {
       ]"
     />
 
-    <div class="relative z-[3]">
+    <section
+      :class="[
+        'container-wide relative z-[3]',
+        'min-h-[100vh]',
+        'pb-20 pt-[140px] text-white',
+        // < 640px
+        'max-[640px]:pb-[50px] max-[640px]:pt-[100px]',
+        // < 1024px
+        'max-[1024px]:pb-[60px] max-[1024px]:pt-[120px]',
+      ]"
+    >
       <BreadcrumbNavigation :items="BREADCRUMB_ITEMS" />
-    </div>
 
-    <div class="relative z-[3]">
       <motion.div
         class="max-[640px]:mb-3 mb-4 max-[640px]:max-w-[90%] max-w-[70%]"
         :initial="{ opacity: 0 }"
@@ -135,6 +130,6 @@ const filteredProducts = computed(() => {
           </RouterLink>
         </div>
       </motion.div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>

@@ -8,45 +8,58 @@ defineProps<{
 </script>
 
 <template>
-  <section
-    class="relative z-[3] bg-[url(/product_others_hero.webp)] bg-cover bg-center bg-no-repeat p-10 text-white max-[768px]:p-5 min-[1280px]:px-[10rem]"
+  <div
+    :class="[
+      'relative bg-[url(/product_others_hero.webp)]',
+      'bg-cover bg-center bg-no-repeat',
+    ]"
   >
     <div class="absolute inset-0 z-0 bg-[#050c1480]" />
 
-    <div
-      class="relative mb-6 flex items-center justify-between max-[768px]:mb-[5px] max-[768px]:flex-col max-[768px]:items-start"
-    >
-      <div class="max-w-[30%] max-[768px]:max-w-[50%]">
-        <h1 class="text-[32px] font-medium max-[768px]:text-xl">
+    <section class="container-narrow relative max-md:py-5 py-10">
+      <div
+        :class="[
+          'flex items-center justify-between mb-6 text-white',
+          // < 768px
+          'max-md:mb-2 max-md:flex-col max-md:items-start',
+        ]"
+      >
+        <h1
+          class="max-w-[30%] max-md:max-w-[50%] text-[32px] font-medium max-md:text-xl max-md:mb-2"
+        >
           Other Products
         </h1>
+
+        <div
+          :class="[
+            'max-w-[20%]',
+            // < 768px
+            'max-md:mt-[-2rem] max-md:max-w-full max-md:leading-[2]',
+          ]"
+        >
+          <RouterLink
+            to="/products"
+            class="mt-6 inline-block cursor-pointer text-[#4da3ff] no-underline"
+          >
+            View More →
+          </RouterLink>
+        </div>
       </div>
 
-      <div
-        class="max-w-[20%] max-[768px]:mt-[-2rem] max-[768px]:max-w-full max-[768px]:leading-[2]"
-      >
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
         <RouterLink
-          to="/products"
-          class="mt-6 inline-block cursor-pointer text-[#4da3ff] no-underline"
+          v-for="product in products"
+          :key="product.slug"
+          :to="`/products/${product.slug}`"
+          class="block"
         >
-          View More →
+          <ProductCard
+            :badges="product.badges"
+            :image="`/features/products/${product.image}`"
+            :title="product.title"
+          />
         </RouterLink>
       </div>
-    </div>
-
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
-      <RouterLink
-        v-for="product in products"
-        :key="product.slug"
-        :to="`/products/${product.slug}`"
-        class="block"
-      >
-        <ProductCard
-          :badges="product.badges"
-          :image="`/features/products/${product.image}`"
-          :title="product.title"
-        />
-      </RouterLink>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>

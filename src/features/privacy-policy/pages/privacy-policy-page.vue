@@ -16,9 +16,7 @@ const translation = computed(
 </script>
 
 <template>
-  <div
-    class="relative w-[100vw] min-h-screen overflow-x-hidden bg-page text-white"
-  >
+  <div class="relative min-h-screen w-screen overflow-x-hidden bg-page">
     <video
       class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
       autoplay
@@ -36,29 +34,40 @@ const translation = computed(
     />
 
     <div
-      class="box-content relative z-[2] max-[640px]:w-[calc(100vw-40px)] w-[70vw] max-[640px]:px-5 max-[640px]:pt-[100px] px-[15%] pt-[140px] pb-20"
+      :class="[
+        'container-wide relative z-[2] pb-20 pt-35 text-white',
+        // < 640px
+        'max-sm:pt-25',
+      ]"
     >
       <BreadcrumbNavigation :items="BREADCRUMB_ITEMS" />
 
-      <header class="mb-12 text-left max-[640px]:mb-8">
+      <header class="mb-12 text-left max-sm:mb-8">
         <h1
           class="mb-3 bg-gradient-to-br from-white from-30% to-[#a5c7ff] bg-clip-text text-[clamp(2.5rem,4vw,3.5rem)] font-bold tracking-[-1px] text-transparent"
         >
           {{ translation.title }}
         </h1>
+
         <p class="mb-6 mt-0 text-sm text-footer-link">
           {{ translation.lastUpdated }}
         </p>
+
         <LanguageToggle v-model="activeLanguage" />
       </header>
 
       <div
-        class="grid grid-cols-[280px_1fr] gap-12 max-[1024px]:grid-cols-1 max-[1024px]:gap-0"
+        :class="[
+          'grid grid-cols-[280px_1fr] gap-12',
+          // < 1024px
+          'max-lg:grid-cols-1 max-lg:gap-0',
+        ]"
       >
         <SectionNavigation
           :heading="translation.sidebarHeading"
           :sections="translation.sections"
         />
+
         <PrivacyPolicyContent :sections="translation.sections" />
       </div>
     </div>

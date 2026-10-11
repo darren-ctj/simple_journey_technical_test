@@ -4,8 +4,6 @@ import CollaborateSection from "@/components/shared/collaborate-section.vue";
 </script>
 
 <template>
-  <div>
-    <ProductsHero />
-    <CollaborateSection />
-  </div>
+  <ProductsHero />
+  <CollaborateSection />
 </template>

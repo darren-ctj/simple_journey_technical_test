@@ -7,13 +7,11 @@ import CtaSection from "../components/cta-section.vue";
 </script>
 
 <template>
-  <div>
-    <HeroSection />
-    <!-- MASIH BELUM SELESAI -->
-    <AboutSection />
-    <ServicesSection />
-    <!--  -->
-    <SolutionsSection />
-    <CtaSection />
-  </div>
+  <HeroSection />
+  <!-- MASIH BELUM SELESAI -->
+  <AboutSection />
+  <ServicesSection />
+  <!--  -->
+  <SolutionsSection />
+  <CtaSection />
 </template>
