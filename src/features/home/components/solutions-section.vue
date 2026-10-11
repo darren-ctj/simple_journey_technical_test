@@ -5,13 +5,16 @@ import ProductCard from "@/components/ui/product-card.vue";
 </script>
 
 <template>
-  <div
-    :class="[
-      'relative',
-      'bg-[url(/features/home/solutions-section-bg.webp)]',
-      'bg-cover bg-center bg-no-repeat',
-    ]"
-  >
+  <div class="relative">
+    <img
+      loading="lazy"
+      fetchpriority="high"
+      src="/features/home/solutions-section-bg.webp"
+      alt=""
+      aria-hidden="true"
+      class="absolute inset-0 z-0 h-full w-full object-cover object-center"
+    />
+
     <div
       class="absolute inset-0 z-[1] bg-[radial-gradient(circle,#050c148c_0%,#050c14e6_70%)]"
     />
@@ -47,14 +50,8 @@ import ProductCard from "@/components/ui/product-card.vue";
           <motion.p
             :initial="{ opacity: 0 }"
             :whileInView="{ opacity: 1 }"
-            :transition="{
-              duration: 1,
-              delay: 1,
-            }"
-            :in-view-options="{
-              once: true,
-              amount: 0.2,
-            }"
+            :transition="{ duration: 1, delay: 1 }"
+            :in-view-options="{ once: true, amount: 0.2 }"
             class="max-md:w-full max-md:text-xs max-md:font-normal max-md:leading-relaxed max-md:tracking-normal"
           >
             Our products are developed to help organizations streamline
@@ -68,14 +65,8 @@ import ProductCard from "@/components/ui/product-card.vue";
         class="relative z-[5] grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12"
         :initial="{ opacity: 0 }"
         :whileInView="{ opacity: 1 }"
-        :transition="{
-          duration: 1,
-          delay: 1.5,
-        }"
-        :in-view-options="{
-          once: true,
-          amount: 0.2,
-        }"
+        :transition="{ duration: 1, delay: 1.5 }"
+        :in-view-options="{ once: true, amount: 0.2 }"
       >
         <RouterLink to="/products/seamless-passenger">
           <ProductCard
@@ -101,14 +92,8 @@ import ProductCard from "@/components/ui/product-card.vue";
         <motion.span
           :initial="{ opacity: 0 }"
           :whileInView="{ opacity: 1 }"
-          :transition="{
-            duration: 1,
-            delay: 0.7,
-          }"
-          :in-view-options="{
-            once: true,
-            amount: 0.2,
-          }"
+          :transition="{ duration: 1, delay: 0.7 }"
+          :in-view-options="{ once: true, amount: 0.2 }"
         >
           View More →
         </motion.span>

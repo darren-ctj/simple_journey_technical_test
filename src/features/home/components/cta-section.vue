@@ -72,10 +72,19 @@ import ContactButton from "@/components/ui/contact-button.vue";
   </section>
 
   <section
-    class="relative box-content flex min-h-[420px] max-w-full items-center overflow-hidden bg-[url(/features/home/cta-section-bg.webp)] bg-cover bg-center bg-no-repeat px-16 py-12"
+    class="relative box-content min-h-[420px] max-w-full overflow-hidden py-12"
   >
+    <img
+      loading="lazy"
+      fetchpriority="high"
+      src="/features/home/cta-section-bg.webp"
+      alt=""
+      aria-hidden="true"
+      class="absolute inset-0 z-0 h-full w-full object-cover object-center"
+    />
+
     <div
-      class="absolute inset-0 bg-[linear-gradient(90deg,#000000bf_0%,#0000008c_40%,#00000040_100%)]"
+      class="absolute inset-0 z-[1] bg-[linear-gradient(90deg,#000000bf_0%,#0000008c_40%,#00000040_100%)]"
     />
   </section>
 </template>

@@ -15,6 +15,7 @@ defineProps<{
       v-show="index === activeIndex"
       :src="solution.video"
       autoplay
+      muted
       loop
       playsinline
       class="block rounded-[12px] object-contain"

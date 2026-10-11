@@ -10,6 +10,7 @@ import { motion } from "motion-v";
       loop
       muted
       playsinline
+      preload="auto"
     >
       <source src="/features/home/hero-section-bg.webm" type="video/webm" />
       Your browser does not support the video tag.
