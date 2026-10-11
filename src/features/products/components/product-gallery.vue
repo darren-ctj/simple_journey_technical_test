@@ -35,6 +35,7 @@ function handlePagerNextClick() {
     >
       <div class="relative overflow-hidden rounded-[12px]">
         <img
+          fetchpriority="high"
           :src="`/features/products/${galleryImages[activeIndex]}`"
           :alt="product.title"
           class="block h-full w-full rounded-[12px] object-contain"
@@ -52,6 +53,7 @@ function handlePagerNextClick() {
     >
       <div class="relative overflow-hidden rounded-[12px]">
         <img
+          fetchpriority="high"
           :src="`/features/products/${image}`"
           :alt="`${product.title} view ${index + 1}`"
           class="block h-full w-full rounded-[12px] object-contain"

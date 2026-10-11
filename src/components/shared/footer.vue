@@ -7,6 +7,8 @@ import { SOCIAL_LINKS } from "@/constants/link";
     <footer :class="['container-wide', 'pt-10 pb-6', 'max-md:py-5']">
       <div class="flex items-center gap-2.5 text-xl font-semibold">
         <img
+          loading="lazy"
+          fetchpriority="high"
           src="/brand/logo.svg"
           alt="Simple Journey"
           class="size-20 max-md:size-[50px]"
@@ -62,6 +64,8 @@ import { SOCIAL_LINKS } from "@/constants/link";
             rel="noopener noreferrer"
           >
             <img
+              loading="lazy"
+              fetchpriority="low"
               :src="social.icon"
               :alt="social.name"
               class="size-4 opacity-85 brightness-0 invert transition-opacity duration-200 hover:opacity-100"

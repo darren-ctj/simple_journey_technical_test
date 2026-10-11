@@ -12,8 +12,9 @@ defineProps<{
   >
     <template v-for="(item, index) in items" :key="item.to">
       <img
+        fetchpriority="high"
         v-if="index > 0"
-        src="/icons/diamond-white.png"
+        src="/icons/diamond-white.webp"
         alt=""
         aria-hidden="true"
         class="h-2.5 w-auto"

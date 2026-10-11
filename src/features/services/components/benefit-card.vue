@@ -34,7 +34,13 @@ defineProps<{
       <div
         class="flex size-11 items-center justify-center rounded-[10px] border border-[#ffffff40]"
       >
-        <img :src="benefit.icon" alt="" class="max-w-full object-contain" />
+        <img
+          loading="lazy"
+          fetchpriority="high"
+          :src="benefit.icon"
+          alt=""
+          class="max-w-full object-contain"
+        />
       </div>
     </div>
 

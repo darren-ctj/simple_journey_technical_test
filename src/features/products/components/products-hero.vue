@@ -32,8 +32,12 @@ const filteredProducts = computed(() => {
 
 <template>
   <div class="relative min-h-[100vh]">
-    <div
-      class="absolute left-0 top-0 w-screen h-screen z-0 bg-[url(/features/products/hero-section-bg.webp)] bg-cover bg-center bg-no-repeat"
+    <img
+      src="/features/products/hero-section-bg.webp"
+      alt=""
+      aria-hidden="true"
+      fetchpriority="high"
+      class="absolute left-0 top-0 z-0 h-screen w-screen object-cover object-center"
     />
 
     <div :class="['absolute inset-0 z-[1]', 'bg-[#01070ecc]']" />

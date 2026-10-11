@@ -25,6 +25,8 @@ defineProps<{
       </div>
 
       <img
+        loading="lazy"
+        fetchpriority="high"
         :src="image"
         :alt="title"
         class="block h-full w-full rounded-[12px] object-contain"

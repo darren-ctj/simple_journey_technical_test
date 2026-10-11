@@ -42,7 +42,8 @@ function handleNavigationClick() {
         ]"
       >
         <img
-          src="/brand/logo-with-text.png"
+          fetchpriority="high"
+          src="/brand/logo-with-text.webp"
           alt="Simple Journey Indonesia Logo"
           class="h-[50px] w-auto"
         />

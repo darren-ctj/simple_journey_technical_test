@@ -6,9 +6,15 @@ import { BREADCRUMB_ITEMS } from "../constants/breadcrumb";
 </script>
 
 <template>
-  <div
-    class="relative bg-[url(/features/services/bg-1.webp)] bg-cover bg-center bg-no-repeat"
-  >
+  <div class="relative overflow-hidden">
+    <img
+      src="/features/services/bg-1.webp"
+      alt=""
+      aria-hidden="true"
+      fetchpriority="high"
+      class="absolute inset-0 z-0 h-full w-full object-cover object-center"
+    />
+
     <div
       class="absolute inset-0 z-[1] bg-[radial-gradient(circle,#050c148c_0%,#050c14e6_70%)]"
     />

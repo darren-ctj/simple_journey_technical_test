@@ -80,7 +80,7 @@ import ProductCard from "@/components/ui/product-card.vue";
         <RouterLink to="/products/seamless-passenger">
           <ProductCard
             :badges="['Software']"
-            image="/features/home/solutions/seamless-passenger.png"
+            image="/features/home/solutions/seamless-passenger.webp"
             title="Seamless Passenger"
           />
         </RouterLink>
@@ -88,7 +88,7 @@ import ProductCard from "@/components/ui/product-card.vue";
         <RouterLink to="/products/passport-issuance">
           <ProductCard
             :badges="['Software']"
-            image="/features/home/solutions/passport-issuance.png"
+            image="/features/home/solutions/passport-issuance.webp"
             title="Passport Issuance"
           />
         </RouterLink>

@@ -4,15 +4,22 @@ import ContactButton from "@/components/ui/contact-button.vue";
 </script>
 
 <template>
-  <div
-    class="relative bg-[url(/features/products/cta-section-bg.webp)] bg-cover bg-center bg-no-repeat"
-  >
+  <div class="relative overflow-hidden">
+    <img
+      src="/features/products/cta-section-bg.webp"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      fetchpriority="high"
+      class="absolute inset-0 z-0 h-full w-full object-cover object-center"
+    />
+
     <div
-      class="absolute inset-0 bg-[linear-gradient(90deg,#000000bf_0%,#0000008c_40%,#00000040_100%)]"
+      class="absolute inset-0 z-[1] bg-[linear-gradient(90deg,#000000bf_0%,#0000008c_40%,#00000040_100%)]"
     />
 
     <section
-      class="container-wide relative z-[1] py-22 text-left text-white max-md:py-5"
+      class="container-wide relative z-[2] py-22 text-left text-white max-md:py-5"
     >
       <motion.h1
         class="mb-3 mt-6 text-[clamp(2rem,2.8vw,2.25rem)] font-medium max-md:text-xl"

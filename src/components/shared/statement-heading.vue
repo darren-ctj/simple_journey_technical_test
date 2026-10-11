@@ -32,7 +32,9 @@ withDefaults(defineProps<StatementHeadingProps>(), {
         }"
       >
         <img
-          src="/icons/diamond.png"
+          loading="lazy"
+          fetchpriority="low"
+          src="/icons/diamond.webp"
           alt="brand icon"
           class="size-[14px] object-contain"
         />

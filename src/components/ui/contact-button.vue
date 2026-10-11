@@ -15,7 +15,8 @@ withDefaults(defineProps<{ label?: string }>(), {
       {{ label }}
 
       <img
-        src="/icons/right-arrow.png"
+        fetchpriority="high"
+        src="/icons/right-arrow.webp"
         alt="Right Arrow"
         class="translate-x-0 transition-transform duration-500 ease-out group-hover:-translate-x-2.5"
       />
