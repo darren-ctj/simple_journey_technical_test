@@ -4,46 +4,44 @@ import ContactButton from "@/components/ui/contact-button.vue";
 </script>
 
 <template>
-  <section
-    class="relative box-content flex min-h-[220px] max-w-full items-center overflow-hidden bg-[url(/features/products/cta-section-bg.webp)] bg-cover bg-center bg-no-repeat px-18 py-12 text-white max-[768px]:p-5"
+  <div
+    class="relative bg-[url(/features/products/cta-section-bg.webp)] bg-cover bg-center bg-no-repeat"
   >
     <div
       class="absolute inset-0 bg-[linear-gradient(90deg,#000000bf_0%,#0000008c_40%,#00000040_100%)]"
     />
 
-    <div
-      class="relative z-[999] flex flex-col items-center p-10 max-[768px]:p-0"
+    <section
+      class="container-wide relative z-[1] py-22 text-left text-white max-md:py-5"
     >
-      <div class="max-w-[700px] text-left max-[768px]:max-w-full">
-        <motion.h1
-          class="mb-3 mt-6 text-[clamp(2rem,2.8vw,2.25rem)] font-medium max-[768px]:text-xl"
-          :initial="{ opacity: 0 }"
-          :animate="{ opacity: 1 }"
-          :transition="{ duration: 1, delay: 0.3 }"
-        >
-          Ready to Collaborate With Us?
-        </motion.h1>
+      <motion.h1
+        class="mb-3 mt-6 text-[clamp(2rem,2.8vw,2.25rem)] font-medium max-md:text-xl"
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :transition="{ duration: 1, delay: 0.3 }"
+      >
+        Ready to Collaborate With Us?
+      </motion.h1>
 
-        <motion.p
-          class="mb-4 max-w-[600px] text-base leading-[175%] tracking-[2%] max-[768px]:max-w-[80%] max-[768px]:text-sm"
-          :initial="{ opacity: 0 }"
-          :animate="{ opacity: 1 }"
-          :transition="{ duration: 1, delay: 0.7 }"
-        >
-          Discuss your business technology needs with the SimpleJourney team.
-        </motion.p>
+      <motion.p
+        class="mb-5 max-w-[600px] text-base leading-[175%] tracking-[2%] max-md:max-w-[80%] max-md:text-sm"
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :transition="{ duration: 1, delay: 0.7 }"
+      >
+        Discuss your business technology needs with the SimpleJourney team.
+      </motion.p>
 
-        <motion.div
-          class="max-w-[200px]"
-          :initial="{ opacity: 0 }"
-          :animate="{ opacity: 1 }"
-          :transition="{ duration: 1, delay: 1 }"
-        >
-          <RouterLink to="/contact" class="link-wrapper block">
-            <ContactButton label="Let's Get Started" />
-          </RouterLink>
-        </motion.div>
-      </div>
-    </div>
-  </section>
+      <motion.div
+        class="max-w-[200px]"
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :transition="{ duration: 1, delay: 1 }"
+      >
+        <RouterLink to="/contact" class="link-wrapper block">
+          <ContactButton label="Let's Get Started" />
+        </RouterLink>
+      </motion.div>
+    </section>
+  </div>
 </template>

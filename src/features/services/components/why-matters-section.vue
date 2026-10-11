@@ -5,30 +5,19 @@ import { BENEFITS } from "../constants/benefit";
 </script>
 
 <template>
-  <section
-    :class="[
-      'box-content relative',
-      'bg-[url(/features/services/bg-2.webp)]',
-      'text-white',
-      'p-[100px_9rem]',
-      // < 640px
-      'max-[640px]:p-[48px_24px]',
-      // < 1024px
-      'max-[1024px]:p-[100px_40px]',
-      // < 1921px
-      'min-[1921px]:p-[120px_80px]',
-    ]"
-  >
-    <div :class="['absolute inset-0 z-[1]', 'bg-[#01070e99]']" />
+  <div class="relative bg-[url(/features/services/bg-2.webp)]">
+    <div class="absolute inset-0 z-[1] bg-[#01070e99]" />
 
-    <div
+    <section
       :class="[
-        'relative z-[1] grid grid-cols-[1.2fr_1fr]',
-        'gap-20',
+        'container-wide relative z-[1] grid grid-cols-[1.2fr_1fr]',
+        'gap-20 py-25 text-white',
+        // < 1280px
+        'max-xl:gap-20',
         // < 1024px
-        'max-[1024px]:grid-cols-1 max-[1024px]:gap-12',
-        // ≥ 1280px
-        'min-[1280px]:gap-32',
+        'max-lg:grid-cols-1 max-lg:gap-12',
+        // < 640px
+        'max-sm:gap-6 max-sm:py-12',
       ]"
     >
       <div class="max-w-[600px]">
@@ -39,13 +28,7 @@ import { BENEFITS } from "../constants/benefit";
         />
       </div>
 
-      <div
-        :class="[
-          'flex flex-col gap-8',
-          // < 640px
-          'max-[640px]:gap-6',
-        ]"
-      >
+      <div class="flex flex-col gap-8 max-sm:gap-6">
         <BenefitCard
           v-for="(benefit, index) in BENEFITS"
           :key="benefit.title"
@@ -53,6 +36,6 @@ import { BENEFITS } from "../constants/benefit";
           :index="index"
         />
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>

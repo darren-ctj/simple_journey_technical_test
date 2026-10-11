@@ -27,12 +27,11 @@ function handleNextClick() {
     <section class="px-0 text-white">
       <motion.div
         :class="[
-          'mx-auto flex flex-wrap items-center justify-center',
-          'mb-16 max-w-[90vw] gap-5',
-          'max-[768px]:mb-[1.3rem]',
-          'max-[768px]:flex-nowrap max-[768px]:justify-start',
-          'max-[768px]:gap-3 max-[768px]:overflow-x-auto',
-          'max-[768px]:pb-2 max-[768px]:[scrollbar-width:none]',
+          'mx-auto mb-16 flex flex-wrap items-center justify-center gap-5',
+          // < 768px
+          'max-md:mb-5 max-md:flex-nowrap max-md:justify-start',
+          'max-md:gap-3 max-md:overflow-x-auto max-md:pb-2',
+          'max-md:[scrollbar-width:none]',
         ]"
         :initial="{ opacity: 0 }"
         :animate="{ opacity: 1 }"
@@ -43,13 +42,12 @@ function handleNextClick() {
           :key="solution.label"
           type="button"
           :class="[
-            'text-sm',
             'mt-4 cursor-pointer whitespace-nowrap rounded-full border-2',
-            'bg-transparent',
-            'px-[6rem] py-[1.4rem]',
+            'bg-transparent px-24 py-[1.4rem] text-sm',
             'transition-all duration-300 hover:bg-[#2f6fed26]',
-            'max-[768px]:min-w-[15rem] max-[768px]:shrink-0',
-            'max-[768px]:px-[1.6rem] max-[768px]:py-[0.8rem]',
+            // < 768px
+            'max-md:min-w-[15rem] max-md:shrink-0',
+            'max-md:px-[1.6rem] max-md:py-[0.8rem]',
             activeIndex === index
               ? 'border-primary text-primary'
               : 'border-white text-[#cbd5e1]',
@@ -63,9 +61,10 @@ function handleNextClick() {
       <!-- Desktop -->
       <motion.div
         :class="[
-          'relative mx-auto grid grid-cols-[1fr_1fr] items-center',
-          'w-full max-w-[1300px] gap-[60px] rounded-lg',
-          'border-[1.3px] border-[#cbd5e1] bg-[#0d131f]',
+          'relative mx-auto grid w-full max-w-[1300px]',
+          'grid-cols-[1fr_1fr] items-center gap-[60px]',
+          'rounded-lg border-[1.3px] border-[#cbd5e1] bg-[#0d131f]',
+          // < 900px
           'max-[900px]:hidden',
         ]"
         :initial="{ opacity: 0 }"
@@ -76,10 +75,10 @@ function handleNextClick() {
           type="button"
           aria-label="Previous"
           :class="[
-            'absolute top-1/2 z-10 flex -translate-y-1/2',
-            'h-[50px] w-[50px] cursor-pointer items-center justify-center',
-            '-left-[25px]',
-            'rounded-lg border border-[#1e90ff66]',
+            'absolute -left-[25px] top-1/2 z-10',
+            'flex h-[50px] w-[50px] -translate-y-1/2',
+            'cursor-pointer items-center justify-center rounded-lg',
+            'border border-[#1e90ff66]',
             'bg-[linear-gradient(135deg,#06080a_0%,#1565c0_500%)]',
             'p-0 text-[32px] leading-none text-[#1e90ff]',
             'transition-all duration-300',
@@ -102,14 +101,14 @@ function handleNextClick() {
             :class="[
               'mb-5 text-[clamp(2rem,2.8vw,2.25rem)]',
               'font-medium leading-[150%] tracking-[-0.5px]',
-              // Tablet
+              // < 900px
               'max-[900px]:text-[28px]',
             ]"
           >
             {{ activeSolution?.label }}
           </h2>
 
-          <p :class="['max-w-[80%]', 'text-base leading-[175%] tracking-[2%]']">
+          <p class="max-w-[80%] text-base leading-[175%] tracking-[2%]">
             {{ activeSolution?.description }}
           </p>
         </div>
@@ -118,10 +117,10 @@ function handleNextClick() {
           type="button"
           aria-label="Next"
           :class="[
-            'absolute top-1/2 z-10 flex -translate-y-1/2',
-            'h-[50px] w-[50px] cursor-pointer items-center justify-center',
-            '-right-[25px]',
-            'rounded-lg border border-[#1e90ff66]',
+            'absolute -right-[25px] top-1/2 z-10',
+            'flex h-[50px] w-[50px] -translate-y-1/2',
+            'cursor-pointer items-center justify-center rounded-lg',
+            'border border-[#1e90ff66]',
             'bg-[linear-gradient(135deg,#06080a_0%,#1565c0_500%)]',
             'p-0 text-[32px] leading-none text-[#1e90ff]',
             'transition-all duration-300',
@@ -138,9 +137,9 @@ function handleNextClick() {
       <!-- Mobile -->
       <motion.div
         :class="[
-          'hidden flex-col rounded-lg',
-          'mb-10 h-[65vh]',
+          'mb-10 hidden h-[65vh] flex-col rounded-lg',
           'border-[0.2px] border-[#f7f3f3fb]',
+          // < 900px
           'max-[900px]:flex max-[900px]:h-auto',
           'max-[900px]:gap-0 max-[900px]:p-[18px]',
         ]"
@@ -150,20 +149,13 @@ function handleNextClick() {
       >
         <div class="flex-1">
           <h2
-            :class="[
-              'my-4 text-[20px] font-medium',
-              'leading-[150%] tracking-[-0.5px]',
-            ]"
+            class="my-4 text-[20px] font-medium leading-[150%] tracking-[-0.5px]"
           >
             {{ activeSolution?.label }}
           </h2>
 
           <p
-            :class="[
-              'text-[14px] leading-[175%]',
-              'tracking-[2%] text-[#cbd5f5]',
-              'mb-3.5',
-            ]"
+            class="mb-3.5 text-[14px] leading-[175%] tracking-[2%] text-[#cbd5f5]"
           >
             {{ activeSolution?.description }}
           </p>
@@ -180,10 +172,10 @@ function handleNextClick() {
           type="button"
           aria-label="Previous"
           :class="[
-            'absolute top-1/2 z-10 flex -translate-y-1/2',
-            'h-[50px] w-[50px] cursor-pointer items-center justify-center',
-            '-left-[25px]',
-            'rounded-lg border border-[#1e90ff66]',
+            'absolute left-0 top-1/2 z-10',
+            'flex h-[50px] w-[50px] -translate-y-1/2',
+            'cursor-pointer items-center justify-center rounded-lg',
+            'border border-[#1e90ff66]',
             'bg-[linear-gradient(135deg,#06080a_0%,#1565c0_500%)]',
             'p-0 text-[32px] leading-none text-[#1e90ff]',
             'transition-all duration-300',
@@ -200,10 +192,10 @@ function handleNextClick() {
           type="button"
           aria-label="Next"
           :class="[
-            'absolute top-1/2 z-10 flex -translate-y-1/2',
-            'h-[50px] w-[50px] cursor-pointer items-center justify-center',
-            '-right-[25px]',
-            'rounded-lg border border-[#1e90ff66]',
+            'absolute right-0 top-1/2 z-10',
+            'flex h-[50px] w-[50px] -translate-y-1/2',
+            'cursor-pointer items-center justify-center rounded-lg',
+            'border border-[#1e90ff66]',
             'bg-[linear-gradient(135deg,#06080a_0%,#1565c0_500%)]',
             'p-0 text-[32px] leading-none text-[#1e90ff]',
             'transition-all duration-300',

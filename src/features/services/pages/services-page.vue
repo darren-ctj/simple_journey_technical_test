@@ -5,9 +5,7 @@ import CollaborateSection from "@/components/shared/collaborate-section.vue";
 </script>
 
 <template>
-  <div>
-    <ServicesHero />
-    <WhyMattersSection />
-    <CollaborateSection />
-  </div>
+  <ServicesHero />
+  <WhyMattersSection />
+  <CollaborateSection />
 </template>
