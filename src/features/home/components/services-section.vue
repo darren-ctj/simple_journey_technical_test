@@ -1,46 +1,47 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { motion, useScroll, useTransform } from "motion-v";
+// import { ref } from "vue";
+// import { motion, useScroll, useTransform } from "motion-v";
+import { motion } from "motion-v";
 import StatementHeading from "@/components/shared/statement-heading.vue";
 import { SERVICES } from "../constants/service";
 
-const wrapperRef = ref<HTMLElement | null>(null);
+// const wrapperRef = ref<HTMLElement | null>(null);
 
-const { scrollYProgress } = useScroll({
-  target: wrapperRef,
-  offset: ["start start", "end end"],
-});
+// const { scrollYProgress } = useScroll({
+//   target: wrapperRef,
+//   offset: ["start start", "end end"],
+// });
 
-const cardAnimations = SERVICES.map((_, index) => {
-  const isLastCard = index === SERVICES.length - 1;
+// const cardAnimations = SERVICES.map((_, index) => {
+//   const isLastCard = index === SERVICES.length - 1;
 
-  const upStart = index * 0.25;
-  const upEnd = upStart + 0.05;
-  const downStart = upStart + 0.2;
-  const downEnd = upStart + 0.3;
+//   const upStart = index * 0.25;
+//   const upEnd = upStart + 0.05;
+//   const downStart = upStart + 0.2;
+//   const downEnd = upStart + 0.3;
 
-  const opacity = isLastCard
-    ? useTransform(scrollYProgress, [upStart, upEnd], [0, 1])
-    : useTransform(
-        scrollYProgress,
-        [upStart, upEnd, downStart, downEnd],
-        [0, 1, 1, 0],
-      );
+//   const opacity = isLastCard
+//     ? useTransform(scrollYProgress, [upStart, upEnd], [0, 1])
+//     : useTransform(
+//         scrollYProgress,
+//         [upStart, upEnd, downStart, downEnd],
+//         [0, 1, 1, 0],
+//       );
 
-  const y = isLastCard
-    ? useTransform(scrollYProgress, () => 0)
-    : useTransform(scrollYProgress, [downStart, downEnd], [0, -50]);
+//   const y = isLastCard
+//     ? useTransform(scrollYProgress, () => 0)
+//     : useTransform(scrollYProgress, [downStart, downEnd], [0, -50]);
 
-  const pointerEvents = useTransform(opacity, (value) =>
-    value >= 0.5 ? "auto" : "none",
-  );
+//   const pointerEvents = useTransform(opacity, (value) =>
+//     value >= 0.5 ? "auto" : "none",
+//   );
 
-  return {
-    opacity,
-    y,
-    pointerEvents,
-  };
-});
+//   return {
+//     opacity,
+//     y,
+//     pointerEvents,
+//   };
+// });
 </script>
 
 <template>
