@@ -6,7 +6,6 @@ defineProps<{
   sections: ProductDetailSection[];
 }>();
 
-/** Sections are expanded by default (the original renders "−" icons). */
 const expandedState = reactive<Record<string, boolean>>({});
 
 function isSectionExpanded(id: string): boolean {
@@ -19,7 +18,7 @@ function handleSectionToggle(id: string) {
 </script>
 
 <template>
-  <div class="container mx-auto w-full text-white">
+  <div class="container mx-auto mt-4 w-full text-white">
     <div
       v-for="section in sections"
       :key="section.id"
@@ -49,7 +48,7 @@ function handleSectionToggle(id: string) {
             <p>{{ section.paragraph }}</p>
           </div>
 
-          <ul v-if="section.items" class="m-0 list-none pl-[18px]">
+          <ul v-if="section.items" class="m-0 list-disc pl-[18px]">
             <li v-for="item in section.items" :key="item" class="my-[6px]">
               {{ item }}
             </li>

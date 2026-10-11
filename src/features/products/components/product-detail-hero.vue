@@ -65,6 +65,7 @@ const detailSections = computed(() =>
           :class="[
             'font-medium leading-[150%] tracking-[-0.5px]',
             'text-[clamp(2rem,2.8vw,2.25rem)]',
+            'mb-2',
             // < 640px
             'max-[640px]:text-xl',
             // < 1024px
@@ -74,7 +75,7 @@ const detailSections = computed(() =>
           {{ product.title }}
         </h1>
 
-        <div class="flex gap-2">
+        <div class="flex gap-2 mb-6">
           <span
             v-for="badge in product.badges"
             :key="badge"
