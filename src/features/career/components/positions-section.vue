@@ -108,6 +108,8 @@ import { CAREER_POSITIONS } from "../constants/career";
                 ]"
               >
                 <img
+                  fetchpriority="high"
+                  loading="lazy"
                   src="/icons/full-time.svg"
                   alt=""
                   aria-hidden="true"
@@ -123,11 +125,14 @@ import { CAREER_POSITIONS } from "../constants/career";
                 ]"
               >
                 <img
+                  fetchpriority="high"
+                  loading="lazy"
                   src="/icons/onsite.svg"
                   alt=""
                   aria-hidden="true"
                   class="size-4 shrink-0 object-contain max-[900px]:size-3.5"
                 />
+
                 {{ position.location }}
               </span>
             </div>
@@ -142,6 +147,7 @@ import { CAREER_POSITIONS } from "../constants/career";
           >
             <img
               fetchpriority="high"
+              loading="lazy"
               class="size-6 object-contain max-[900px]:size-[18px] group-hover:animate-icon-swipe"
               src="/icons/right-arrow.webp"
               alt=""

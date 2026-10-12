@@ -1,9 +1,4 @@
-export interface CareerPositionDetail {
-  description: string;
-  responsibilities: string[];
-  qualifications: string[];
-  preferred: string[];
-}
+import type { CareerPositionDetail } from "../types/career-detail";
 
 const SHIFT_ENGINEER_DESCRIPTION =
   "PT Simple Journey Indonesia is seeking a Shift Engineer responsible for maintaining operational stability during shift hours.";
@@ -22,14 +17,18 @@ const SHIFT_ENGINEER_QUALIFICATIONS = [
   "Able to write technical documentation clearly and systematically",
 ];
 
-export const DEFAULT_POSITION_DETAIL: CareerPositionDetail = {
-  description: SHIFT_ENGINEER_DESCRIPTION,
-  responsibilities: SHIFT_ENGINEER_RESPONSIBILITIES,
-  qualifications: SHIFT_ENGINEER_QUALIFICATIONS,
-  preferred: [],
-};
-
 export const CAREER_POSITION_DETAILS: Record<string, CareerPositionDetail> = {
+  QA: {
+    description: SHIFT_ENGINEER_DESCRIPTION,
+    responsibilities: SHIFT_ENGINEER_RESPONSIBILITIES,
+    qualifications: SHIFT_ENGINEER_QUALIFICATIONS,
+    preferred: [
+      "Familiar with the concepts of manual testing and regression testing",
+      "Experience using bug-tracking tools (Jira, Trello, etc.)",
+      "Basic understanding of QA and testing processes",
+      "Able to perform quality checks (basic/manual testing) on system changes or releases during a shift",
+    ],
+  },
   Designer: {
     description: SHIFT_ENGINEER_DESCRIPTION,
     responsibilities: SHIFT_ENGINEER_RESPONSIBILITIES,
@@ -40,6 +39,44 @@ export const CAREER_POSITION_DETAILS: Record<string, CareerPositionDetail> = {
       "Has a UI/UX design portfolio (Figma/Adobe XD/Sketch)",
       "Able to support the creation of designs for monitoring dashboards, PowerPoint presentations, brochures, simple animations, internal tools, or visual documentation.",
     ],
+  },
+  Devops: {
+    description: SHIFT_ENGINEER_DESCRIPTION,
+    responsibilities: SHIFT_ENGINEER_RESPONSIBILITIES,
+    qualifications: SHIFT_ENGINEER_QUALIFICATIONS,
+    preferred: [
+      "Familiar with Docker, Kubernetes, or CI/CD tools (Jenkins, GitLab CI, etc.)",
+      "Experience with cloud platforms (AWS/GCP/Azure) and monitoring tools (Grafana, Prometheus, etc.)",
+      "Basic understanding of CI/CD, cloud computing, or containerization",
+      "Able to assist with deployment processes, monitor infrastructure, and maintain system uptime during shifts",
+    ],
+  },
+  FE: {
+    description: SHIFT_ENGINEER_DESCRIPTION,
+    responsibilities: SHIFT_ENGINEER_RESPONSIBILITIES,
+    qualifications: SHIFT_ENGINEER_QUALIFICATIONS,
+    preferred: [
+      "Familiar with React, Vue, or Angular",
+      "Understands the basics of responsive design and cross-browser compatibility",
+      "Has experience with or a basic understanding of front-end development (HTML, CSS, JavaScript, and modern frameworks)",
+      "Able to troubleshoot bugs or make improvements to web pages or application interfaces as needed",
+    ],
+  },
+  "Security Engineer": {
+    description: SHIFT_ENGINEER_DESCRIPTION,
+    responsibilities: SHIFT_ENGINEER_RESPONSIBILITIES,
+    qualifications: SHIFT_ENGINEER_QUALIFICATIONS,
+    preferred: [
+      "Familiar with security monitoring tools (SIEM, firewalls, IDS/IPS)",
+      "Basic understanding of vulnerability assessments or penetration testing",
+      "Basic understanding of system/network security concepts",
+      "Able to monitor potential system security threats and perform initial escalation (basic incident response) during shifts",
+    ],
+  },
+  "Fullstack Engineer": {
+    description: SHIFT_ENGINEER_DESCRIPTION,
+    responsibilities: SHIFT_ENGINEER_RESPONSIBILITIES,
+    qualifications: SHIFT_ENGINEER_QUALIFICATIONS,
   },
 };
 
