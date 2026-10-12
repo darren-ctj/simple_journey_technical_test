@@ -7,12 +7,10 @@ const RESET_DELAY = 500;
 const NEXT_KEYS = ["PageDown", "ArrowDown", " ", "Enter"];
 const PREVIOUS_KEYS = ["PageUp", "ArrowUp"];
 
-/**
- * Drives a pinned two-slide deck (statement → why-choose-us) like the original
- * site: while the section is in the viewport, wheel / keyboard steps through
- * the slides with a scroll lock; leaving the section resets back to slide one.
- */
-export function useSlideDeck(sectionRef: Ref<HTMLElement | null>, slideCount: number) {
+export function useSlideDeck(
+  sectionRef: Ref<HTMLElement | null>,
+  slideCount: number,
+) {
   const currentIndex = ref(0);
   const lastIndex = slideCount - 1;
 

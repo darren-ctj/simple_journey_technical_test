@@ -1,5 +1,7 @@
 # Simple Journey Indonesia Website | Front-End Technical Test
 
+🌐 Live URL : https://simplejourney.netlify.app/
+
 A responsive web application built with **Vue 3**, focusing on visual accuracy, maintainable code, performance, and accessibility.
 
 This website was developed as part of the Front-End Engineer technical test for PT Simple Journey Indonesia.

@@ -1,9 +1,5 @@
 import { onBeforeUnmount, onMounted, ref } from "vue";
 
-/**
- * Tracks whether the page has been scrolled past the given threshold.
- * Mirrors the navbar's `scrolled` state from the original site.
- */
 export function useScrolled(threshold = 50) {
   const isScrolled = ref(false);
 

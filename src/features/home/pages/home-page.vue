@@ -8,10 +8,8 @@ import CtaSection from "../components/cta-section.vue";
 
 <template>
   <HeroSection />
-  <!-- MASIH BELUM SELESAI -->
   <AboutSection />
   <ServicesSection />
-  <!--  -->
   <SolutionsSection />
   <CtaSection />
 </template>

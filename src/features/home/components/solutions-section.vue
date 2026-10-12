@@ -44,7 +44,7 @@ import ProductCard from "@/components/ui/product-card.vue";
         <div
           :class="[
             'relative z-[5] max-w-[23%] leading-loose',
-            'max-md:mt-[-6rem] max-md:mb-8 max-md:max-w-full',
+            'max-md:mb-8 max-md:max-w-full',
           ]"
         >
           <motion.p
