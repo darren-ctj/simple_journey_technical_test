@@ -1,9 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../features/home/pages/home-page.vue";
-import ServicesPage from "../features/services/pages/services-page.vue";
-import ProductsPage from "../features/products/pages/products-page.vue";
-import ProductDetailPage from "../features/products/pages/product-detail-page.vue";
-import PrivacyPolicyPage from "../features/privacy-policy/pages/privacy-policy-page.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,22 +12,24 @@ const router = createRouter({
     {
       path: "/services",
       name: "services",
-      component: ServicesPage,
+      component: () => import("../features/services/pages/services-page.vue"),
     },
     {
       path: "/products",
       name: "products",
-      component: ProductsPage,
+      component: () => import("../features/products/pages/products-page.vue"),
     },
     {
       path: "/products/:slug",
       name: "product-detail",
-      component: ProductDetailPage,
+      component: () =>
+        import("../features/products/pages/product-detail-page.vue"),
     },
     {
       path: "/privacy-policy",
       name: "privacy-policy",
-      component: PrivacyPolicyPage,
+      component: () =>
+        import("../features/privacy-policy/pages/privacy-policy-page.vue"),
     },
     {
       path: "/:pathMatch(.*)*",
