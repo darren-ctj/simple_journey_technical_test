@@ -6,7 +6,7 @@ import { BREADCRUMB_ITEMS } from "../constants/breadcrumb";
 </script>
 
 <template>
-  <div class="relative overflow-hidden">
+  <div class="relative">
     <img
       src="/features/services/bg-1.webp"
       alt=""
@@ -15,12 +15,10 @@ import { BREADCRUMB_ITEMS } from "../constants/breadcrumb";
       class="absolute inset-0 z-0 h-full w-full object-cover object-center"
     />
 
-    <div
-      class="absolute inset-0 z-[1] bg-[radial-gradient(circle,#050c148c_0%,#050c14e6_70%)]"
-    />
+    <div class="absolute left-0 top-0 z-[1] h-full w-full bg-[#01070ecc]" />
 
     <div
-      class="absolute inset-x-0 top-0 z-[2] h-[35%] bg-gradient-to-b from-[#010304] via-[#01030433] via-60% to-[#01030400]"
+      class="absolute inset-x-0 top-0 z-[2] h-[35%] w-full bg-gradient-to-b from-[#010304] via-[#01030433] via-60% to-[#01030400]"
     />
 
     <section

@@ -29,7 +29,7 @@ function handlePagerNextClick() {
 
 <template>
   <div
-    class="rounded-2xl border border-white/5 bg-white/5 shadow-[0_4px_30px_#0000001a] backdrop-blur-[6.5px]"
+    class="rounded-2xl border border-white/20 bg-white/5 shadow-[0_4px_30px_#0000001a] backdrop-blur-[6.5px]"
     :title="product.title"
   >
     <img
@@ -44,7 +44,7 @@ function handlePagerNextClick() {
     <div
       v-for="(image, index) in galleryImages"
       :key="index"
-      class="cursor-pointer rounded-2xl border border-white/5 bg-white/5 shadow-[0_4px_30px_#0000001a] backdrop-blur-[6.5px] hover:scale-105"
+      class="cursor-pointer rounded-2xl border border-white/20 bg-white/5 shadow-[0_4px_30px_#0000001a] backdrop-blur-[6.5px] hover:scale-105"
       @click="handleThumbnailSelect(index)"
     >
       <div class="relative overflow-hidden rounded-[12px]">

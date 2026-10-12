@@ -31,7 +31,7 @@ const filteredProducts = computed(() => {
 </script>
 
 <template>
-  <div class="relative min-h-[100vh]">
+  <div class="relative min-h-screen">
     <img
       src="/features/products/hero-section-bg.webp"
       alt=""
@@ -40,31 +40,27 @@ const filteredProducts = computed(() => {
       class="absolute left-0 top-0 z-0 h-screen w-screen object-cover object-center"
     />
 
-    <div :class="['absolute inset-0 z-[1]', 'bg-[#01070ecc]']" />
+    <div class="absolute left-0 top-0 z-[1] h-screen w-screen bg-[#01070ecc]" />
 
     <div
-      :class="[
-        'absolute inset-x-0 top-0 z-[2]',
-        'h-[35%]',
-        'bg-gradient-to-b from-[#010304] via-[#01030433] via-60% to-[#01030400]',
-      ]"
+      class="absolute left-0 top-0 z-[2] h-[35vh] w-screen bg-gradient-to-b from-[#010304] via-[#01030433] via-60% to-[#01030400]"
     />
 
     <section
       :class="[
         'container-wide relative z-[3]',
-        'min-h-[100vh]',
+        'min-h-screen',
         'pb-20 pt-[140px] text-white',
         // < 640px
-        'max-[640px]:pb-[50px] max-[640px]:pt-[100px]',
+        'max-sm:pb-[50px] max-sm:pt-[100px]',
         // < 1024px
-        'max-[1024px]:pb-[60px] max-[1024px]:pt-[120px]',
+        'max-lg:pb-[60px] max-lg:pt-[120px]',
       ]"
     >
       <BreadcrumbNavigation :items="BREADCRUMB_ITEMS" />
 
       <motion.div
-        class="max-[640px]:mb-3 mb-4 max-[640px]:max-w-[90%] max-w-[70%]"
+        class="mb-4 max-w-[70%] max-sm:mb-3 max-sm:max-w-[90%]"
         :initial="{ opacity: 0 }"
         :animate="{ opacity: 1 }"
         :transition="{ duration: 1, delay: 0.3 }"
@@ -74,9 +70,9 @@ const filteredProducts = computed(() => {
             'font-medium leading-[150%] tracking-[-0.5px]',
             'text-[clamp(2rem,2.8vw,2.25rem)]',
             // < 640px
-            'max-[640px]:text-xl',
+            'max-sm:text-xl',
             // < 1024px
-            'max-[1024px]:text-[40px]',
+            'max-lg:text-[40px]',
           ]"
         >
           Technology Products Built for Enterprise Needs
@@ -90,13 +86,10 @@ const filteredProducts = computed(() => {
       >
         <p
           :class="[
-            'text-base',
-            'max-w-[45%]',
-            'mb-8',
             // < 640px
-            'max-[640px]:text-xs',
-            'max-[640px]:max-w-full',
-            'max-[640px]:mb-5',
+            'max-sm:mb-8 max-sm:max-w-full max-sm:text-xs',
+
+            'mb-18 max-w-[45%] text-base',
           ]"
         >
           Our products are designed to address real operational challenges
@@ -118,7 +111,7 @@ const filteredProducts = computed(() => {
         />
 
         <div
-          class="grid w-[90%] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 max-[768px]:w-full min-[1280px]:w-full min-[1280px]:gap-12"
+          class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 max-md:w-full xl:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] xl:gap-12"
         >
           <RouterLink
             v-for="product in filteredProducts"

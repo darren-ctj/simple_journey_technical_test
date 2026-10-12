@@ -4,7 +4,7 @@ import ContactButton from "@/components/ui/contact-button.vue";
 
 <template>
   <section
-    class="relative box-content flex flex-col rounded-2xl border border-white/5 bg-white/5 px-8 pt-7 pb-9 shadow-[0_4px_30px_#0000001a] backdrop-blur-[6.5px]"
+    class="relative box-content flex flex-col rounded-2xl border border-white/20 bg-white/5 px-8 pt-7 pb-9 shadow-[0_4px_30px_#0000001a] backdrop-blur-[6.5px]"
   >
     <h1
       class="mb-3 font-semibold text-[clamp(2rem,2.8vw,2.25rem)] leading-normal"

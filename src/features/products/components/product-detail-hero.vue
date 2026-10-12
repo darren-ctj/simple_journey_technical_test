@@ -20,14 +20,20 @@ const detailSections = computed(() =>
 </script>
 
 <template>
-  <div
-    class="relative min-h-screen overflow-hidden bg-[url(/product_hero.webp)] bg-cover bg-center bg-no-repeat"
-  >
-    <div class="absolute inset-0 z-[1] bg-[#01070ecc]" />
+  <div class="relative min-h-screen">
+    <img
+      src="/features/products/hero-section-bg.webp"
+      alt=""
+      aria-hidden="true"
+      fetchpriority="high"
+      class="absolute left-0 top-0 z-0 h-screen w-screen object-cover object-center"
+    />
+
+    <div class="absolute left-0 top-0 z-[1] h-screen w-screen bg-[#01070ecc]" />
 
     <div
       :class="[
-        'absolute inset-x-0 top-0 z-[2] h-[35%]',
+        'absolute left-0 top-0 z-[2] h-[35vh] w-screen',
         'bg-gradient-to-b from-[#010304] via-[#01030433] via-60% to-[#01030400]',
       ]"
     />

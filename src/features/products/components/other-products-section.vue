@@ -14,9 +14,15 @@ defineProps<{
       'bg-cover bg-center bg-no-repeat',
     ]"
   >
-    <div class="absolute inset-0 z-0 bg-[#050c1480]" />
+    <img
+      src="/features/products/other-products-section-bg.webp"
+      alt=""
+      aria-hidden="true"
+      fetchpriority="high"
+      class="absolute left-0 top-0 z-0 h-screen w-screen object-cover object-center"
+    />
 
-    <section class="container-narrow relative max-md:py-5 py-10">
+    <section class="container-narrow relative z-[2] max-md:py-5 py-10">
       <div
         :class="[
           'flex items-center justify-between mb-6 text-white',

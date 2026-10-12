@@ -22,18 +22,18 @@ function handleCategorySelect(category: string) {
 
 <template>
   <div
-    class="mb-10 flex w-full max-w-full items-center justify-between max-[768px]:flex-col max-[768px]:items-center max-[768px]:gap-4"
+    class="w-full flex items-center justify-between max-[768px]:flex-col max-[768px]:items-center max-[768px]:gap-4 max-[768px]:mb-6 mb-10"
   >
-    <div class="w-full max-w-[420px]">
+    <div class="w-full min-[768px]:max-w-[420px]">
       <input
         v-model="searchQuery"
         type="text"
         placeholder="Search products..."
-        class="w-[80%] rounded-full border border-white bg-[linear-gradient(145deg,#141620e6,#0a0c14e6)] p-[14px_20px] text-[15px] text-white outline-none transition-all duration-300 placeholder:text-[#ffffff8c] hover:border-[#788cff66] focus:border-[#7b8cff] focus:shadow-[0_0_0_3px_#7b8cff40] max-[768px]:w-[88%]"
+        class="w-full rounded-full border border-white bg-[linear-gradient(145deg,#141620e6,#0a0c14e6)] p-[14px_20px] text-[15px] text-white outline-none transition-all duration-300 placeholder:text-[#ffffff8c] hover:border-[#788cff66] focus:border-[#7b8cff] focus:shadow-[0_0_0_3px_#7b8cff40]"
       />
     </div>
 
-    <div class="relative w-[20%] max-w-full max-[768px]:w-full">
+    <div class="relative max-[768px]:w-full w-[20%]">
       <button
         type="button"
         class="flex w-full cursor-pointer items-center justify-between rounded-full border border-white bg-[linear-gradient(145deg,#141620e6,#0a0c14e6)] p-[14px_20px] text-white transition-all duration-300 hover:border-[#788cff66] max-[480px]:p-[12px_16px] max-[480px]:text-sm"
