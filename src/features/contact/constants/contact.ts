@@ -1,13 +1,4 @@
-export const BREADCRUMB_ITEMS = [
-  { label: "Home", to: "/" },
-  { label: "Contact", to: "/contact" },
-];
-
-export interface OfficeInfoCard {
-  icon: string;
-  label: string;
-  value: string;
-}
+import type { OfficeInfoCard } from "../types";
 
 export const OFFICE_INFO_CARDS: OfficeInfoCard[] = [
   {
@@ -23,6 +14,7 @@ export const OFFICE_INFO_CARDS: OfficeInfoCard[] = [
   {
     icon: "/icons/location.webp",
     label: "Address",
-    value: "Ruko Cendana, Jl. Benteng Betawi No.37, RT.004/RW.015, Tanah Tinggi, Kec. Tangerang, Kota Tangerang, Banten 15119",
+    value:
+      "Ruko Cendana, Jl. Benteng Betawi No.37, RT.004/RW.015, Tanah Tinggi, Kec. Tangerang, Kota Tangerang, Banten 15119",
   },
 ];

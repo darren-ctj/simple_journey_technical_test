@@ -20,7 +20,12 @@ defineProps<{
           'max-md:size-9',
         ]"
       >
-        <img :src="icon" :alt="label" class="size-5 object-contain" />
+        <img
+          fetchpriority="high"
+          :src="icon"
+          :alt="label"
+          class="size-5 object-contain"
+        />
       </div>
     </div>
 
