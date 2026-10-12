@@ -6,7 +6,7 @@ import { BREADCRUMB_ITEMS } from "../constants/breadcrumb";
 </script>
 
 <template>
-  <section class="relative min-h-screen">
+  <div class="relative min-h-screen">
     <img
       src="/features/about/hero-section-bg.webp"
       alt=""
@@ -85,5 +85,5 @@ import { BREADCRUMB_ITEMS } from "../constants/breadcrumb";
         </motion.div>
       </div>
     </section>
-  </section>
+  </div>
 </template>

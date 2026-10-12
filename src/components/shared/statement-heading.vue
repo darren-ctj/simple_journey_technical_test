@@ -14,13 +14,8 @@ withDefaults(defineProps<StatementHeadingProps>(), {
 </script>
 
 <template>
-  <section
-    :class="[
-      'relative z-[100]',
-      align === 'left' ? 'text-left' : 'text-center',
-    ]"
-  >
-    <div class="relative z-20 max-w-[1100px]">
+  <section :class="[align === 'left' ? 'text-left' : 'text-center']">
+    <div class="max-w-[1100px]">
       <motion.div
         class="inline-flex items-center gap-[10px]"
         :initial="{ opacity: 0 }"
