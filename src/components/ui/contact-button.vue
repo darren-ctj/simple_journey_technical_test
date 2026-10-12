@@ -1,7 +1,14 @@
 <script setup lang="ts">
-withDefaults(defineProps<{ label?: string }>(), {
-  label: "Contact Us",
-});
+withDefaults(
+  defineProps<{
+    label?: string;
+    showIcon?: boolean;
+  }>(),
+  {
+    label: "Contact Us",
+    showIcon: true,
+  },
+);
 </script>
 
 <template>
@@ -15,6 +22,7 @@ withDefaults(defineProps<{ label?: string }>(), {
       {{ label }}
 
       <img
+        v-if="showIcon"
         fetchpriority="high"
         src="/icons/right-arrow.webp"
         alt="Right Arrow"

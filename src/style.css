@@ -43,6 +43,22 @@
   background: linear-gradient(135deg, #1e88ff, #1466a8);
 }
 
+@theme {
+  --animate-icon-swipe: icon-swipe 1.5s ease-in-out;
+
+  @keyframes icon-swipe {
+    0% {
+      transform: translate(0);
+    }
+    35% {
+      transform: translate(-5px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+}
+
 /* @layer */
 @layer base {
   :root {

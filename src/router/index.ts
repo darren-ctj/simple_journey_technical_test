@@ -26,6 +26,27 @@ const router = createRouter({
         import("../features/products/pages/product-detail-page.vue"),
     },
     {
+      path: "/about",
+      name: "about",
+      component: () => import("../features/about/pages/about-page.vue"),
+    },
+    {
+      path: "/career",
+      name: "career",
+      component: () => import("../features/career/pages/career-page.vue"),
+    },
+    {
+      path: "/career/:slug",
+      name: "career-detail",
+      component: () =>
+        import("../features/career/pages/career-detail-page.vue"),
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: () => import("../features/contact/pages/contact-page.vue"),
+    },
+    {
       path: "/privacy-policy",
       name: "privacy-policy",
       component: () =>
